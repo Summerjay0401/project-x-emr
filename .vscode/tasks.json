@@ -4,9 +4,31 @@
         {
             "label": "app",
             "dependsOn": [
+                "app-init",
                 "project-emr-backend",
                 "project-emr-frontend",
                 "project-emr-frontend-admin"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "app-init",
+            "dependsOn": [
+                "npm-install",
+                "project-emr-backend-init",
+                "project-emr-frontend-init",
+                "project-emr-frontend-admin-init"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "npm-install",
+            "dependsOn": [
+                "project-emr-backend-install",
+                "project-emr-frontend-install",
+                "project-emr-frontend-admin-install"
             ],
             "dependsOrder": "parallel",
             "problemMatcher": []
@@ -16,24 +38,167 @@
             "type": "shell",
             "command": "npm start",
             "options": {
-                "cwd": "${workspaceFolder}\\src\\project-emr-frontend"
-            }
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-frontend-init",
+            "type": "shell",
+            "command": "touch .env.local; echo 'PORT=3000' >> .env.local",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-frontend-install",
+            "type": "shell",
+            "command": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
         },
         {
             "label": "project-emr-frontend-admin",
             "type": "shell",
             "command": "npm start",
             "options": {
-                "cwd": "${workspaceFolder}\\src\\project-emr-frontend-admin"
-            }
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend-admin"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-frontend-admin-init",
+            "type": "shell",
+            "command": "touch .env.local; echo 'PORT=3001' >> .env.local",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend-admin"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-frontend-admin-install",
+            "type": "shell",
+            "command": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-frontend-admin"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
         },
         {
             "label": "project-emr-backend",
             "type": "shell",
             "command": "npm start",
             "options": {
-                "cwd": "${workspaceFolder}\\src\\project-emr-backend"
-            }
+                "cwd": "${workspaceFolder}\/src\/project-emr-backend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-backend-init",
+            "type": "shell",
+            "command": "touch .env.local; echo 'PORT=5065' >> .env.local",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-backend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-backend-install",
+            "type": "shell",
+            "command": "npm install",
+            "options": {
+                "cwd": "${workspaceFolder}\/src\/project-emr-backend"
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "new note",
+            "type": "shell",
+            "command": "set -lx t (date +%Y-%m-%d-%H-%M-%S);echo \"# $t\" > ${workspaceFolder}/notes/$t.md;code -r ${workspaceFolder}/notes/$t.md"
         }
     ]
 }

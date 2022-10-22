@@ -43,9 +43,11 @@ git clone https://github.com/Summerjay0401/project-x-emr.git
 
 4. See the [project-emr-frontend-admin Getting Started](/src/project-emr-frontend-admin/) section to install dependencies and set up environment variables.
 
-5. Open the `project-emr-frontend.code-workspace` workspace in VSCode. This workspace relies on tasks to simplify common development tasks. See the [Tasks](#tasks) section for details on running and available tasks.
+5. Open the `project-emr-frontend.code-workspace` workspace in VSCode. This workspace relies on tasks to simplify common development tasks.
 
-6. run the `npm-install` task. Wait for the dependency installations to complete.
+See the [Tasks](#tasks) section for details on running and available tasks.
+
+6. Run the `app-init` task. Wait for the dependency installations to complete.
 
 7. Run the `app` task.
 
