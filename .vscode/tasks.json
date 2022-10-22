@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "app",
+            "dependsOn": [
+                "project-emr-backend",
+                "project-emr-frontend",
+                "project-emr-frontend-admin"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "project-emr-frontend",
+            "type": "shell",
+            "command": "npm start",
+            "options": {
+                "cwd": "${workspaceFolder}\\src\\project-emr-frontend"
+            }
+        },
+        {
+            "label": "project-emr-frontend-admin",
+            "type": "shell",
+            "command": "npm start",
+            "options": {
+                "cwd": "${workspaceFolder}\\src\\project-emr-frontend-admin"
+            }
+        },
+        {
+            "label": "project-emr-backend",
+            "type": "shell",
+            "command": "npm start",
+            "options": {
+                "cwd": "${workspaceFolder}\\src\\project-emr-backend"
+            }
+        }
+    ]
+}
