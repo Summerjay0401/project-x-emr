@@ -53,7 +53,7 @@
         {
             "label": "project-emr-frontend-init",
             "type": "shell",
-            "command": "touch .env.local; echo 'PORT=3000' >> .env.local",
+            "command": "touch .env.local; echo 'PORT=4000' >> .env.local",
             "options": {
                 "cwd": "${workspaceFolder}\/src\/project-emr-frontend"
             }, 
@@ -107,7 +107,7 @@
         {
             "label": "project-emr-frontend-admin-init",
             "type": "shell",
-            "command": "touch .env.local; echo 'PORT=3001' >> .env.local",
+            "command": "touch .env.local; echo 'PORT=4001' >> .env.local",
             "options": {
                 "cwd": "${workspaceFolder}\/src\/project-emr-frontend-admin"
             }, 

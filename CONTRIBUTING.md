@@ -49,12 +49,12 @@ See the [Tasks](#tasks) section for details on running and available tasks.
 
 6. Run the `app-init` task. Wait for the dependency installations to complete.
 
-7. Run the `app` task.
+7. Run the `app-run` task.
 
 8. Access the running applications via browser:
 
-- Patient Site (project-emr-frontend): http://localhost:3000/
-- Admin Site (project-emr-frontend-admin): http://localhost:3001/
+- Patient Site (project-emr-frontend): http://localhost:4000/
+- Admin Site (project-emr-frontend-admin): http://localhost:4001/
 - API Swagger Docs (project-emr-backend): http://localhost:5065/swagger
 - MySql database:
   - Host: localhost
