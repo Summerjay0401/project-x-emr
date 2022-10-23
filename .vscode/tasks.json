@@ -2,9 +2,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "app",
+            "label": "app-run",
             "dependsOn": [
-                "app-init",
                 "project-emr-backend",
                 "project-emr-frontend",
                 "project-emr-frontend-admin"
