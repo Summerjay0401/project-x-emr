@@ -17,7 +17,7 @@
 
 ## Bug Reports / Feature Enhancements
 
-All work done is tracked via Trello. Active tickets can be found in the [project-x-emr](https://trello.com/b/xFDJDZFT/emr) project in Jira.
+All work done is tracked via Trello. Active tickets can be found in the [project-x-emr](https://trello.com/b/xFDJDZFT/emr) project in trello.
 
 ## Setup for Local Development
 
