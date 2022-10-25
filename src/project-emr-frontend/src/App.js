@@ -1,21 +1,16 @@
-import { Routes, Route } from "react-router-dom"
-import {
-  Layout,
-  Dashboard,
-  Sample
-} from './pages'
-
 import './App.css';
+import Routes from './navigation';
+import { AuthProvider } from './context/auth.context'
 
-function App() {
+const App = () => {
+  // we get the user from the localStorage because that's where we will save their account on the login process
+  let user = localStorage.getItem("user");
+  user = JSON.parse(user);
+
   return (
-    <div className="app">
-      {/* this defines all the routes */}
-      <Routes>
-        <Route path='/' element={<Layout><Dashboard /></Layout>}></Route>
-        <Route path='/sample' element={<Layout><Sample /></Layout>}></Route>
-      </Routes>
-    </div>
+    <AuthProvider userData={user}>
+      <Routes />
+    </AuthProvider>
   );
 }
 
