@@ -8,14 +8,14 @@ const Dashboard = () => {
       <div>
             <h1>Dashboard</h1>
             <div className="widgets">
-            <Link to="/myprofile"><Widget type="my-profile" /></Link>
-                <Widget type="appointments" />
-                <Widget type="progress-notes" />
-                <Widget type="laboratory-results" />
-                <Widget type="my-medications" />
-                <Widget type="messages" />
-                <Widget type="telehealth" />
-                <Widget type="payments" />
+            <Link to="/my-profile"><Widget type="my-profile" /></Link>
+            <Link to="/appointments"><Widget type="appointments" /></Link>
+            <Link to="/progress-notes"><Widget type="progress-notes" /></Link>
+            <Link to="/lab-results"><Widget type="laboratory-results" /></Link>
+            <Link to="/my-medications"><Widget type="my-medications" /></Link>
+            <Link to="/messages"><Widget type="messages" /></Link>
+            <Link to="/telehealth"><Widget type="telehealth" /></Link>
+            <Link to="/payments"><Widget type="payments" /></Link>
             </div>
     </div>
   )
