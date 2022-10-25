@@ -1,13 +1,14 @@
 import React from 'react'
 
 import Widget from '../../components/Widget'
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
       <div>
             <h1>Dashboard</h1>
             <div className="widgets">
-                <Widget type="my-profile" />
+            <Link to="/myprofile"><Widget type="my-profile" /></Link>
                 <Widget type="appointments" />
                 <Widget type="progress-notes" />
                 <Widget type="laboratory-results" />
