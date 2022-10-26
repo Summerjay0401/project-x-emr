@@ -8,17 +8,25 @@ import LabResults from "../pages/LabResults";
 import MyMedications from "../pages/MyMedications";
 import Messages from "../pages/Messages";
 import Telehealth from "../pages/Telehealth";
-import Paymennts from "../pages/Payments";
+import Payments from "../pages/Payments";
+
+import { useAuth } from "../context/auth.context";
+import { ProtectedRoute } from './protectedRoute';
 
 const Router = () => {
+
+  let { user } = useAuth();
+
   return (
     <Routes>
       <Route
         path="/"
         element={
-          <Layout>
-            <Dashboard />
-          </Layout>
+          <ProtectedRoute user={user}>
+            <Layout>
+              <Dashboard />
+            </Layout>
+          </ProtectedRoute>
         }
       ></Route>
 
