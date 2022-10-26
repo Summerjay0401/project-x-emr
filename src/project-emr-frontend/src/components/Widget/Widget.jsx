@@ -31,7 +31,7 @@ const Widget = ({ type }) => {
     case "appointments":
       data = {
         title: "APPOINTMENTS",
-        link: "/appointments",
+        link: "/scheduler",
         icon: (
             <FontAwesomeIcon icon={faCalendarDays}
             className="icon"
