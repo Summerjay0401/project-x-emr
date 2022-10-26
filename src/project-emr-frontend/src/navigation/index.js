@@ -8,7 +8,7 @@ import LabResults from "../pages/LabResults";
 import MyMedications from "../pages/MyMedications";
 import Messages from "../pages/Messages";
 import Telehealth from "../pages/Telehealth";
-import Payments from "../pages/Payments";
+import Paymennts from "../pages/Payments";
 
 const Router = () => {
   return (
