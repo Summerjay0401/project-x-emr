@@ -29,11 +29,11 @@
     padding: 0;
 }
 .sidebar .center ul .title {
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
-    color: #999;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    color: slategray;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 .sidebar .center ul li {
     display: flex;
@@ -45,11 +45,12 @@
     background-color: #ece8ff;
 }
 .sidebar .center ul li .icon {
-    font-size: 18px;
-    color: #7451f8;
+    font-size: 35px;
+    color: #59007f;
+    margin-bottom: 10px;
 }
 .sidebar .center ul li span {
-    font-size: 13px;
+    font-size: 18pxpx;
     font-weight: 600;
     color: #888;
     margin-left: 10px;
