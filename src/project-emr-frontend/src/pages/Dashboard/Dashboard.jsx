@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Widget from '../../components/Widget'
-import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (

@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Layout, Dashboard, Sample } from "../pages";
 import Login from "../pages/Login";
 import MyProfile from "../pages/MyProfile";
-import Appointments from "../pages/Appointments";
+import Scheduler from "../pages/Scheduler";
 import ProgressNotes from "../pages/ProgressNotes";
 import LabResults from "../pages/LabResults";
 import MyMedications from "../pages/MyMedications";
@@ -42,10 +42,10 @@ const Router = () => {
       ></Route>
 
       <Route
-        path="/appointments"
+        path="/scheduler"
         element={
           <Layout>
-            <Appointments />
+            <Scheduler />
           </Layout>
         }
       ></Route>
