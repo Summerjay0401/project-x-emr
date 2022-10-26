@@ -12,6 +12,12 @@
     height: 200px;
     flex: 1 0 21%; 
 }
+.widget:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    font-weight: 400;
+}
+
 .widget .left, .widget .right {
     display: flex;
     flex-direction: column;
