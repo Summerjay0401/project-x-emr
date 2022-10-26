@@ -1,15 +1,9 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserDoctor, faUser, faCalendarDays, faClipboard, faFlask, faPills, faEnvelope, faCreditCard } from '@fortawesome/free-solid-svg-icons' // <-- import styles to be used
+
 import { Link } from "react-router-dom";
 // import { DarkModeContext } from "../../context/darkModeContext";
 // import { useContext } from "react";
@@ -36,53 +30,61 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="title">LISTS</p>
-          <Link to="/sample" style={{ textDecoration: "none" }}>
+          <Link to="/scheduler" style={{ textDecoration: "none" }}>
             <li>
-              <PersonOutlineIcon className="icon" />
-              <span>Sample</span>
+              <FontAwesomeIcon icon={faCalendarDays} className="icon" />
+              <span>Appointments</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Products</span>
+          <Link to="/progress-notes" style={{ textDecoration: "none" }}>
+          <li>
+            <FontAwesomeIcon icon={faClipboard} className="icon" />
+            <span>Progress Notes</span>
             </li>
           </Link>
+          <Link to="/lab-results" style={{ textDecoration: "none" }}>
           <li>
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-          </li>
+            <FontAwesomeIcon icon={faFlask} className="icon" />
+            <span>Lab Results</span>
+            </li>
+          </Link>
+          <Link to="/my-medications" style={{ textDecoration: "none" }}>
           <li>
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
+            <FontAwesomeIcon icon={faPills} className="icon" />
+            <span>My Medications</span>
+            </li>
+          </Link>
+          <Link to="/messages" style={{ textDecoration: "none" }}>
+          <li>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
+            <span>My Messages</span>
+            </li>
+          </Link>
           <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
-          <p className="title">SERVICE</p>
+          <p className="title">SERVICES</p>
+          <Link to="/telehealth" style={{ textDecoration: "none" }}>
           <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
-          </li>
+            <FontAwesomeIcon icon={faUserDoctor} className="icon" />
+            <span>Chat with my Provider</span>
+            </li>
+          </Link>
+          <Link to="/payments" style={{ textDecoration: "none" }}>
           <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
-          </li>
+            <FontAwesomeIcon icon={faCreditCard} className="icon" />
+            <span>Payments</span>
+            </li>
+          </Link>
           <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
+          <Link to="/my-profile" style={{ textDecoration: "none" }}>
+            <li>
+              <FontAwesomeIcon icon={faUser} className="icon" />
+              <span>My Profile</span>
+            </li>
+          </Link>
           <li>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
