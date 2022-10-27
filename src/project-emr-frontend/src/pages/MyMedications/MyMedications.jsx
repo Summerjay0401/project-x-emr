@@ -1,12 +1,170 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import WbTwilightIcon from '@mui/icons-material/WbTwilight';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import NightsStayIcon from '@mui/icons-material/NightsStay';
+import HotelIcon from '@mui/icons-material/Hotel';
+import CheckIcon from '@mui/icons-material/Check';
+import './MyMedications.css';
+import { flexbox } from '@mui/system';
 
-export default function myMedications() {
-    return (
-      <div>
-        <h1>THIS IS THE MY MEDICATIONS TEST</h1>
-        <Link to="/"><Button variant="outlined">Go Back</Button></Link>
-      </div>
-    );
-  }
+function createData(
+  medicationName,
+  morningMeds,
+  afternoonMeds,
+  nightMeds,
+  bedtimeMeds,
+  asNeededMeds,
+) {
+  return {
+    medicationName,
+    morningMeds,
+    afternoonMeds,
+    nightMeds,
+    bedtimeMeds,
+    asNeededMeds,
+    history: [
+      {
+        indication: 'Anti-Platelet',
+        lastTaken: '10/26/2022 0800',
+        refill: 1,
+      },
+      {
+        indication: 'Anti-Hypertensive',
+        lastTaken: '10/25/2022 2200',
+        refill: 1,
+      },
+    ],
+  };
+}
+
+const useStyles = makeStyles({
+  root: {
+    fontSize: '15px !important',
+    textAlign: 'center !important'
+  },
+});
+
+function Row(props) {
+  const { row } = props;
+  const [open, setOpen] = React.useState(false);
+  const classes = useStyles();
+  return (
+    <React.Fragment>
+      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+        <TableCell>
+          <IconButton
+            aria-label="expand row"
+            size="large"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+          </IconButton>
+        </TableCell>
+        <TableCell component="th" scope="row" className={classes.root}>
+          {row.medicationName}
+        </TableCell>
+        <TableCell className={classes.root}>{row.morningMeds}</TableCell>
+        <TableCell className={classes.root}>{row.afternoonMeds}</TableCell>
+        <TableCell className={classes.root}>{row.nightMeds}</TableCell>
+        <TableCell className={classes.root}>{row.bedtimeMeds}</TableCell>
+        <TableCell className={classes.root}>{row.asNeededMeds}</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Box sx={{ margin: 1 }}>
+              <Typography variant="h6" gutterBottom component="div">
+                Medication Information
+              </Typography>
+              <Table size="small" aria-label="purchases">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Indication</TableCell>
+                    <TableCell>Last Taken</TableCell>
+                    <TableCell align="right">Refill</TableCell>
+                    <TableCell align="right">More Information</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {row.history.map((historyRow) => (
+                    <TableRow key={historyRow.indication}>
+                      <TableCell component="th" scope="row">
+                        {historyRow.indication}
+                      </TableCell>
+                      <TableCell>{historyRow.lastTaken}</TableCell>
+                      <TableCell align="right">{historyRow.refill}</TableCell>
+                      <TableCell align="right">{historyRow.moreInformation}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Box>
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </React.Fragment>
+  );
+}
+
+const rows = [
+  createData('Aspirin', <CheckIcon fontSize= 'large' />, null, null, null, null),
+  createData('Lipitor', null, null, null, <CheckIcon fontSize= 'large' />, null),
+  createData('Novolog', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Metoprolol', <CheckIcon fontSize= 'large' />, null, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Metformin', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Percocet', null, null, null, null, <CheckIcon fontSize= 'large' />),
+];
+
+const MyMedications = () => {
+  const classes = useStyles();
+  return (
+    <TableContainer component={Paper}>
+      <Table aria-label="collapsible table">
+        <TableHead>
+          <TableRow>
+            <TableCell />
+            <TableCell/>
+            <TableCell className={classes.root}><WbSunnyIcon fontSize='large'/></TableCell>
+            <TableCell className={classes.root}><WbTwilightIcon fontSize='large'/></TableCell>
+            <TableCell className={classes.root}><NightsStayIcon fontSize='large' /></TableCell>
+            <TableCell className={classes.root}><HotelIcon fontSize='large' /></TableCell>
+            <TableCell className={classes.root}></TableCell>
+          </TableRow>
+          <TableRow className={classes.root}>
+            <TableCell />
+            <TableCell className={classes.root}>MEDICATION NAME</TableCell>
+            <TableCell className={classes.root}>MORNING</TableCell>
+            <TableCell className={classes.root}>AFTERNOON</TableCell>
+            <TableCell className={classes.root}>NIGHT</TableCell>
+            <TableCell className={classes.root}>BEDTIME</TableCell>
+            <TableCell className={classes.root}>AS NEEDED</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <Row key={row.medicationName} row={row} />
+          ))}
+        </TableBody>
+      </Table>
+      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
+    </TableContainer> 
+  );
+}
+
+export default MyMedications; 
