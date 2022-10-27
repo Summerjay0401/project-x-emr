@@ -15,7 +15,7 @@ const Scheduler = () => {
     },
     alertProps: {
         open: true,
-        color: "info",          // info | success | warning | error
+        color: "success",          // info | success | warning | error
         severity: "info",       // info | success | warning | error
         message: "SCHEDULE YOUR APPOINTMENTS NOW" ,
         showActionButton: true,
