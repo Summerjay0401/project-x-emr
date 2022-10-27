@@ -1,8 +1,8 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Layout, Dashboard } from "../pages";
 import Login from "../pages/Login";
 import MyProfile from "../pages/MyProfile";
-import Appointments from "../pages/Appointments";
+import Scheduler from "../pages/Scheduler";
 import ProgressNotes from "../pages/ProgressNotes";
 import LabResults from "../pages/LabResults";
 import MyMedications from "../pages/MyMedications";
@@ -13,10 +13,6 @@ import Payments from "../pages/Payments";
 import { ProtectedRoute } from './protectedRoute';
 
 const Router = () => {
-  const location = useLocation();
-  console.log('hash', location.hash);
-  console.log('pathname', location.pathname);
-  console.log('search', location.search);
   return (
     <Routes>
 
@@ -31,6 +27,12 @@ const Router = () => {
       <Route element={<ProtectedRoute/>}>
         <Route path='/my-profile' element={<Layout/>} >
           <Route path='/my-profile' element={<MyProfile />} />
+        </Route>
+      </Route>
+
+      <Route element={<ProtectedRoute/>}>
+        <Route path='/scheduler' element={<Layout/>} >
+          <Route path='/scheduler' element={<Scheduler />} />
         </Route>
       </Route>
 

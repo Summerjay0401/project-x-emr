@@ -8,7 +8,7 @@ import "./Layout.css";
 
 const Layout = ({ children }) => {
     return <div className="main">
-        {/* <Sidebar /> */}
+        <Sidebar />
         <div className="mainContainer">
             <Navbar />
             <div className="content">
