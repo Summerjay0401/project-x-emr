@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { default as MuiScheduler } from "react-mui-scheduler";
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 import PageTitle from '../../components/PageTitle';
 
 const Scheduler = () => {
@@ -98,7 +100,7 @@ const Scheduler = () => {
       
     return (
         <>
-            <PageTitle title="My Medications"/>
+            <PageTitle title="My Appointments"/>
             <MuiScheduler
             locale="en"
             events={events}
@@ -110,7 +112,8 @@ const Scheduler = () => {
             onCellClick={handleCellClick}
             onTaskClick={handleEventClick}
             onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
-                />
+            />
+            <Link to="/"><Button variant="outlined">Go Back</Button></Link>
         </>
     )
 }
