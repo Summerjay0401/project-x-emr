@@ -32,7 +32,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function Signup() {
 
   const navigate = useNavigate();
   let [state, dispatch] = useAuth();
@@ -47,12 +47,12 @@ export default function SignIn() {
 
     const data = new FormData(event.currentTarget);
     const username = data.get('email');
+    const email = data.get('email');
     const password = data.get('password');
 
-    AuthService.login(username, password).then(
+    AuthService.register(username, email, password).then(
       (user) => {
-        dispatch({type: 'LOGIN', payload: user })
-        navigate("/");
+        navigate("/login");
       },
       (error) => {
         const resMessage =
@@ -85,9 +85,19 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Sign up
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
+              autoFocus
+            />
             <TextField
               margin="normal"
               required
@@ -118,17 +128,12 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              Sign Up
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
               <Grid item>
-                <Link href="#" variant="body2" onClick={() => navigate("/signup")}>
-                  {"Don't have an account? Sign Up"}
+                <Link href="#" variant="body2"onClick={() => navigate("/login")}>
+                  {"Already have an account? Login here!"}
                 </Link>
               </Grid>
             </Grid>
