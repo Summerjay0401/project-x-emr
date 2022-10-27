@@ -11,6 +11,7 @@ import Telehealth from "../pages/Telehealth";
 import Payments from "../pages/Payments";
 
 import { ProtectedRoute } from './protectedRoute';
+import Signup from "../pages/Signup/Signup";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
       </Route>
       
       <Route path="/login" element={<Login />}></Route>
+      <Route path="/signup" element={<Signup />}></Route>
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/my-profile' element={<Layout/>} >
@@ -33,12 +35,6 @@ const Router = () => {
       <Route element={<ProtectedRoute/>}>
         <Route path='/scheduler' element={<Layout/>} >
           <Route path='/scheduler' element={<Scheduler />} />
-        </Route>
-      </Route>
-
-      <Route element={<ProtectedRoute/>}>
-        <Route path='/appointments' element={<Layout/>} >
-          <Route path='/appointments' element={<Appointments />} />
         </Route>
       </Route>
 
