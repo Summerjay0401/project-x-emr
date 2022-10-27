@@ -138,7 +138,6 @@ const MyMedications = () => {
   return (
     <>
       <PageTitle title="My Medications"/>
-      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
       <TableContainer component={Paper}>
         <Table aria-label="collapsible table">
           <TableHead>
@@ -167,6 +166,7 @@ const MyMedications = () => {
             ))}
           </TableBody>
         </Table>
+        <Link to="/"><Button variant="outlined">Go Back</Button></Link>
       </TableContainer> 
     </>
   );
