@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { default as MuiScheduler } from "react-mui-scheduler";
+import PageTitle from '../../components/PageTitle';
 
 const Scheduler = () => {
     const [state] = useState({
@@ -96,18 +97,21 @@ const Scheduler = () => {
     }
       
     return (
-        <MuiScheduler
-          locale="en"
-          events={events}
-          legacyStyle={false}
-          options={state?.options}
-          alertProps={state?.alertProps}
-          toolbarProps={state?.toolbarProps}
-          onEventsChange={handleEventsChange}
-          onCellClick={handleCellClick}
-          onTaskClick={handleEventClick}
-          onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
-        />
+        <>
+            <PageTitle title="My Medications"/>
+            <MuiScheduler
+            locale="en"
+            events={events}
+            legacyStyle={false}
+            options={state?.options}
+            alertProps={state?.alertProps}
+            toolbarProps={state?.toolbarProps}
+            onEventsChange={handleEventsChange}
+            onCellClick={handleCellClick}
+            onTaskClick={handleEventClick}
+            onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
+                />
+        </>
     )
 }
 
