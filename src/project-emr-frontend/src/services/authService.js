@@ -7,6 +7,7 @@ const register = (username, email, password) => {
     username,
     email,
     password,
+    roles: ["user"]
   });
 };
 
