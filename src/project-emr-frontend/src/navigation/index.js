@@ -52,7 +52,7 @@ const Router = () => {
 
       <Route element={<ProtectedRoute/>}>
         <Route path='/my-medications' element={<Layout/>} >
-          <Route path='/my-medications' element={<LabResults />} />
+          <Route path='/my-medications' element={<MyMedications />} />
         </Route>
       </Route>
 
