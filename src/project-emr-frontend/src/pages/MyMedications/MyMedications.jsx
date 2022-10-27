@@ -20,6 +20,7 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import HotelIcon from '@mui/icons-material/Hotel';
 import CheckIcon from '@mui/icons-material/Check';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import './MyMedications.css';
 import { flexbox } from '@mui/system';
 import PageTitle from '../../components/PageTitle';
@@ -87,7 +88,7 @@ function Row(props) {
         <TableCell className={classes.root}>{row.asNeededMeds}</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
@@ -96,21 +97,21 @@ function Row(props) {
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Indication</TableCell>
-                    <TableCell>Last Taken</TableCell>
-                    <TableCell align="right">Refill</TableCell>
-                    <TableCell align="right">More Information</TableCell>
+                    <TableCell className={classes.root}>Indication</TableCell>
+                    <TableCell className={classes.root}>Last Taken</TableCell>
+                    <TableCell className={classes.root}>Refill</TableCell>
+                    <TableCell className={classes.root}>More Information</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.indication}>
-                      <TableCell component="th" scope="row">
+                    <TableRow className={classes.root} key={historyRow.indication}>
+                      <TableCell className={classes.root} component="th" scope="row">
                         {historyRow.indication}
                       </TableCell>
-                      <TableCell>{historyRow.lastTaken}</TableCell>
-                      <TableCell align="right">{historyRow.refill}</TableCell>
-                      <TableCell align="right">{historyRow.moreInformation}</TableCell>
+                      <TableCell className={classes.root}>{historyRow.lastTaken}</TableCell>
+                      <TableCell className={classes.root}>{historyRow.refill}</TableCell>
+                      <TableCell className={classes.root}>{historyRow.moreInformation} <HelpOutlineIcon fontSize= 'medium'style={{ color: "#424242" }}/></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -124,12 +125,12 @@ function Row(props) {
 }
 
 const rows = [
-  createData('Aspirin', <CheckIcon fontSize= 'large' />, null, null, null, null),
-  createData('Lipitor', null, null, null, <CheckIcon fontSize= 'large' />, null),
-  createData('Novolog', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
-  createData('Metoprolol', <CheckIcon fontSize= 'large' />, null, <CheckIcon fontSize= 'large' />, null, null),
-  createData('Metformin', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
-  createData('Percocet', null, null, null, null, <CheckIcon fontSize= 'large' />),
+  createData('Aspirin  80 mg, once daily (oral)', <CheckIcon fontSize= 'large' />, null, null, null, null),
+  createData('Lipitor 40 mg, once daily at bedtime (oral) ', null, null, null, <CheckIcon fontSize= 'large' />, null),
+  createData('Novolog 10 units, thrice daily before meals (Subcutaneous Injection)', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Metoprolol 25 mg, twice daily (oral)', <CheckIcon fontSize= 'large' />, null, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Metformin 50 mg, thrice daily (oral)', <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, <CheckIcon fontSize= 'large' />, null, null),
+  createData('Percocet 5mg/325mg, every 6 hours as needed for pain (oral)', null, null, null, null, <CheckIcon fontSize= 'large' />),
 ];
 
 const MyMedications = () => {
@@ -144,10 +145,10 @@ const MyMedications = () => {
             <TableRow>
               <TableCell />
               <TableCell/>
-              <TableCell className={classes.root}><WbSunnyIcon fontSize='large'/></TableCell>
-              <TableCell className={classes.root}><WbTwilightIcon fontSize='large'/></TableCell>
-              <TableCell className={classes.root}><NightsStayIcon fontSize='large' /></TableCell>
-              <TableCell className={classes.root}><HotelIcon fontSize='large' /></TableCell>
+              <TableCell className={classes.root}><WbSunnyIcon fontSize='large' style={{ color: "#b2a429" }}/></TableCell>
+              <TableCell className={classes.root}><WbTwilightIcon fontSize='large' style={{ color: "#b26a00" }}/></TableCell>
+              <TableCell className={classes.root}><NightsStayIcon fontSize='large' style={{ color: "#2c387e" }} /></TableCell>
+              <TableCell className={classes.root}><HotelIcon fontSize='large' style={{ color: "#424242" }}/></TableCell>
               <TableCell className={classes.root}></TableCell>
             </TableRow>
             <TableRow className={classes.root}>
