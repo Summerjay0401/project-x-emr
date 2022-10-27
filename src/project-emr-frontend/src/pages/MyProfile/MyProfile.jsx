@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import PageTitle from '../../components/PageTitle';
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';

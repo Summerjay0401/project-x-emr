@@ -7,7 +7,7 @@
 .main .mainContainer .content {
     padding: 15px;
 }
-.main .mainContainer .widgets, .main .mainContainer .charts {
+.main .mainContainer .main .mainContainer .charts {
     display: flex;
     padding: 20px;
     gap: 20px;

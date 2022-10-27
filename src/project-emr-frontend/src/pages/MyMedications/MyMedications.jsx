@@ -22,6 +22,7 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import CheckIcon from '@mui/icons-material/Check';
 import './MyMedications.css';
 import { flexbox } from '@mui/system';
+import PageTitle from '../../components/PageTitle';
 
 function createData(
   medicationName,
@@ -134,36 +135,39 @@ const rows = [
 const MyMedications = () => {
   const classes = useStyles();
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
-        <TableHead>
-          <TableRow>
-            <TableCell />
-            <TableCell/>
-            <TableCell className={classes.root}><WbSunnyIcon fontSize='large'/></TableCell>
-            <TableCell className={classes.root}><WbTwilightIcon fontSize='large'/></TableCell>
-            <TableCell className={classes.root}><NightsStayIcon fontSize='large' /></TableCell>
-            <TableCell className={classes.root}><HotelIcon fontSize='large' /></TableCell>
-            <TableCell className={classes.root}></TableCell>
-          </TableRow>
-          <TableRow className={classes.root}>
-            <TableCell />
-            <TableCell className={classes.root}>MEDICATION NAME</TableCell>
-            <TableCell className={classes.root}>MORNING</TableCell>
-            <TableCell className={classes.root}>AFTERNOON</TableCell>
-            <TableCell className={classes.root}>NIGHT</TableCell>
-            <TableCell className={classes.root}>BEDTIME</TableCell>
-            <TableCell className={classes.root}>AS NEEDED</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <Row key={row.medicationName} row={row} />
-          ))}
-        </TableBody>
-      </Table>
+    <>
+      <PageTitle title="My Medications"/>
       <Link to="/"><Button variant="outlined">Go Back</Button></Link>
-    </TableContainer> 
+      <TableContainer component={Paper}>
+        <Table aria-label="collapsible table">
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              <TableCell/>
+              <TableCell className={classes.root}><WbSunnyIcon fontSize='large'/></TableCell>
+              <TableCell className={classes.root}><WbTwilightIcon fontSize='large'/></TableCell>
+              <TableCell className={classes.root}><NightsStayIcon fontSize='large' /></TableCell>
+              <TableCell className={classes.root}><HotelIcon fontSize='large' /></TableCell>
+              <TableCell className={classes.root}></TableCell>
+            </TableRow>
+            <TableRow className={classes.root}>
+              <TableCell />
+              <TableCell className={classes.root}>MEDICATION NAME</TableCell>
+              <TableCell className={classes.root}>MORNING</TableCell>
+              <TableCell className={classes.root}>AFTERNOON</TableCell>
+              <TableCell className={classes.root}>NIGHT</TableCell>
+              <TableCell className={classes.root}>BEDTIME</TableCell>
+              <TableCell className={classes.root}>AS NEEDED</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <Row key={row.medicationName} row={row} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer> 
+    </>
   );
 }
 
