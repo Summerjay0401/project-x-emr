@@ -1,121 +1,131 @@
-import React, { useState } from 'react';
-import { default as MuiScheduler } from "react-mui-scheduler";
-import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
-import PageTitle from '../../components/PageTitle';
+import { useState } from "react";
+import FullCalendar, { formatDate } from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import listPlugin from "@fullcalendar/list";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  useTheme,
+} from "@mui/material";
+import Header from "../../components/Header";
+import { tokens } from "../../theme";
 
 const Scheduler = () => {
-    const [state] = useState({
-    options: {
-        transitionMode: "zoom", // or fade
-        startWeekOn: "mon",     // or sun
-        defaultMode: "month",    // or week | day | timeline
-        minWidth: 540,
-        maxWidth: 540,
-        minHeight: 540,
-        maxHeight: 540
-    },
-    alertProps: {
-        open: true,
-        color: "success",          // info | success | warning | error
-        severity: "info",       // info | success | warning | error
-        message: "SCHEDULE YOUR APPOINTMENTS NOW" ,
-        showActionButton: true,
-        showNotification: true,
-        delay: 1500
-    },
-    toolbarProps: {
-        showSearchBar: true,
-        showSwitchModeButtons: true,
-        showDatePicker: true
-    }
-    })
-      
-    const events = [
-    {
-        id: "event-1",
-        label: "Medical consultation",
-        groupLabel: "Dr Shaun Murphy",
-        user: "Dr Shaun Murphy",
-        color: "#f28f6a",
-        startHour: "04:00 AM",
-        endHour: "05:00 AM",
-        date: "2022-05-05",
-        createdAt: new Date(),
-        createdBy: "Kristina Mayer"
-    },
-    {
-        id: "event-2",
-        label: "Medical consultation",
-        groupLabel: "Dr Claire Brown",
-        user: "Dr Claire Brown",
-        color: "#099ce5",
-        startHour: "09:00 AM",
-        endHour: "10:00 AM",
-        date: "2022-05-09",
-        createdAt: new Date(),
-        createdBy: "Kristina Mayer"
-    },
-    {
-        id: "event-3",
-        label: "Medical consultation",
-        groupLabel: "Dr Menlendez Hary",
-        user: "Dr Menlendez Hary",
-        color: "#263686",
-        startHour: "13 PM",
-        endHour: "14 PM",
-        date: "2022-05-10",
-        createdAt: new Date(),
-        createdBy: "Kristina Mayer"
-    },
-    {
-        id: "event-4",
-        label: "Consultation prénatale",
-        groupLabel: "Dr Shaun Murphy",
-        user: "Dr Shaun Murphy",
-        color: "#f28f6a",
-        startHour: "08:00 AM",
-        endHour: "09:00 AM",
-        date: "2022-05-11",
-        createdAt: new Date(),
-        createdBy: "Kristina Mayer"
-    }
-    ]
-    
-    const handleCellClick = (event, row, day) => {
-    // Do something...
-    }
-    
-    const handleEventClick = (event, item) => {
-    // Do something...
-    }
-    
-    const handleEventsChange = (item) => {
-    // Do something...
-    }
-    
-    const handleAlertCloseButtonClicked = (item) => {
-    // Do something...
-    }
-      
-    return (
-        <>
-            <PageTitle title="My Appointments"/>
-            <MuiScheduler
-            locale="en"
-            events={events}
-            legacyStyle={false}
-            options={state?.options}
-            alertProps={state?.alertProps}
-            toolbarProps={state?.toolbarProps}
-            onEventsChange={handleEventsChange}
-            onCellClick={handleCellClick}
-            onTaskClick={handleEventClick}
-            onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
-            />
-            <Link to="/"><Button variant="outlined">Go Back</Button></Link>
-        </>
-    )
-}
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const [currentEvents, setCurrentEvents] = useState([]);
 
-export default Scheduler
+  const handleDateClick = (selected) => {
+    const title = prompt("Please enter a new title for your event");
+    const calendarApi = selected.view.calendar;
+    calendarApi.unselect();
+
+    if (title) {
+      calendarApi.addEvent({
+        id: `${selected.dateStr}-${title}`,
+        title,
+        start: selected.startStr,
+        end: selected.endStr,
+        allDay: selected.allDay,
+      });
+    }
+  };
+
+  const handleEventClick = (selected) => {
+    if (
+      window.confirm(
+        `Are you sure you want to delete the event '${selected.event.title}'`
+      )
+    ) {
+      selected.event.remove();
+    }
+  };
+
+  return (
+    <Box m="20px">
+      <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
+
+      <Box display="flex" justifyContent="space-between">
+        {/* CALENDAR SIDEBAR */}
+        <Box
+          flex="1 1 20%"
+          backgroundColor={colors.primary[400]}
+          p="15px"
+          borderRadius="4px"
+        >
+          <Typography variant="h5">Events</Typography>
+          <List>
+            {currentEvents.map((event) => (
+              <ListItem
+                key={event.id}
+                sx={{
+                  backgroundColor: colors.greenAccent[500],
+                  margin: "10px 0",
+                  borderRadius: "2px",
+                }}
+              >
+                <ListItemText
+                  primary={event.title}
+                  secondary={
+                    <Typography>
+                      {formatDate(event.start, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+
+        {/* CALENDAR */}
+        <Box flex="1 1 100%" ml="15px">
+          <FullCalendar
+            height="75vh"
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              listPlugin,
+            ]}
+            headerToolbar={{
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+            }}
+            initialView="dayGridMonth"
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            select={handleDateClick}
+            eventClick={handleEventClick}
+            eventsSet={(events) => setCurrentEvents(events)}
+            initialEvents={[
+              {
+                id: "12315",
+                title: "All-day event",
+                date: "2022-09-14",
+              },
+              {
+                id: "5123",
+                title: "Timed event",
+                date: "2022-09-28",
+              },
+            ]}
+          />
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default Scheduler;
