@@ -8,7 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -128,6 +127,7 @@ const Messages = () => {
                 </Grid>
             </Grid>
       </Grid>
+      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
       </div>
   );
 }
