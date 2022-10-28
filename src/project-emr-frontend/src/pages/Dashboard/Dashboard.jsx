@@ -6,7 +6,7 @@ import Widget from '../../components/Widget'
 const Dashboard = () => {
   return (
       <div>
-        <PageTitle title="Dashboard"/>
+        <PageTitle title="Welcome, Summer!"/>
       
         <div className="widgets">
           <Widget type="my-profile" />
