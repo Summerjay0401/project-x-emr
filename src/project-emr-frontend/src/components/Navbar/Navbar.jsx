@@ -17,10 +17,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <div className="search">
-          <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon />
-        </div>
         <div className="items">
           <div className="item">
             <LanguageOutlinedIcon className="icon" />
@@ -48,7 +44,7 @@ const Navbar = () => {
             <div className="counter">2</div>
           </div>
           <div className="item">
-            <ListOutlinedIcon className="icon" />
+          <SearchOutlinedIcon className="icon" />
           </div>
           <div className="item">
             <img
