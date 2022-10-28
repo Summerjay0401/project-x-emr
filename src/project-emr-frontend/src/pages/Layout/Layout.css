@@ -5,7 +5,7 @@
 .main .mainContainer {
     flex: 6;
 }
-.main .mainContainer .content {
+.main .mainContainer {
     padding: 15px;
 }
 .main .mainContainer .main .mainContainer .charts {
