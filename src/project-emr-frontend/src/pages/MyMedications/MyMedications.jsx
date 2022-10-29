@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { makeStyles } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
@@ -22,7 +22,6 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import CheckIcon from '@mui/icons-material/Check';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import './MyMedications.css';
-import { flexbox } from '@mui/system';
 import PageTitle from '../../components/PageTitle';
 
 function createData(

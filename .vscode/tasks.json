@@ -6,7 +6,7 @@
             "dependsOn": [
                 "project-emr-backend",
                 "project-emr-frontend",
-                "project-emr-frontend-admin"
+                // "project-emr-frontend-admin"
             ],
             "dependsOrder": "parallel",
             "problemMatcher": []
@@ -17,7 +17,7 @@
                 "npm-install",
                 "project-emr-backend-init",
                 "project-emr-frontend-init",
-                "project-emr-frontend-admin-init"
+                // "project-emr-frontend-admin-init"
             ],
             "dependsOrder": "parallel",
             "problemMatcher": []
@@ -27,7 +27,7 @@
             "dependsOn": [
                 "project-emr-backend-install",
                 "project-emr-frontend-install",
-                "project-emr-frontend-admin-install"
+                // "project-emr-frontend-admin-install"
             ],
             "dependsOrder": "parallel",
             "problemMatcher": []
