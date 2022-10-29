@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@mui/material';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';

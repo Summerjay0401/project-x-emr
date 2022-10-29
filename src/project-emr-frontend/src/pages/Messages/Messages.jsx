@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import PageTitle from '../../components/PageTitle';
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';

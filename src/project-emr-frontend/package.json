@@ -19,7 +19,6 @@
     "@mui/lab": "^5.0.0-alpha.105",
     "@mui/material": "^5.5.3",
     "@mui/styled-engine": "^5.10.8",
-    "@mui/styles": "^5.10.10",
     "@mui/x-data-grid": "^5.17.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
