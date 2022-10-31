@@ -1,12 +1,14 @@
 import React from 'react'
-import PageTitle from '../../components/PageTitle'
+import Header from '../../components/Header'
+import { Box } from '@mui/material'
 
 import Widget from '../../components/Widget'
 
 const Dashboard = () => {
   return (
-      <div>
-        <PageTitle title="Welcome, Summer!"/>
+    <div>
+      <Box m="20px"></Box>
+      <Header title="Welcome Summer!" subtitle="Dashboard" />
       
         <div className="widgets">
           <Widget type="my-profile" />
