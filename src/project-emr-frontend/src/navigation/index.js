@@ -9,6 +9,7 @@ import MyMedications from "../pages/MyMedications";
 import Messages from "../pages/Messages";
 import Telehealth from "../pages/Telehealth";
 import Payments from "../pages/Payments";
+import ViewLabResult from "../pages/ViewLabResults";
 
 import { ProtectedRoute } from "./protectedRoute";
 import Signup from "../pages/Signup/Signup";
@@ -71,6 +72,12 @@ const Router = () => {
       <Route element={<ProtectedRoute />}>
         <Route path="/payments" element={<Layout />}>
           <Route path="/payments" element={<Payments />} />
+        </Route>
+      </Route>
+
+      <Route element={<ProtectedRoute />}>
+        <Route path="/view-lab-result" element={<Layout />}>
+          <Route path="/view-lab-result" element={<ViewLabResult />} />
         </Route>
       </Route>
 

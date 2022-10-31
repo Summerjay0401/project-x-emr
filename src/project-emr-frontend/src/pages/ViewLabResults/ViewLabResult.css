@@ -1,0 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
+import "./Widget.css";
+
+const Widget = ({ type }) => {
+  const navigate = useNavigate();
+  let data;
+
+  const handleLinks = (link) => {
+    navigate(link);
+  }

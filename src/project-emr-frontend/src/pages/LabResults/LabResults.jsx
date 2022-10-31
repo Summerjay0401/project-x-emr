@@ -8,12 +8,15 @@ import { useTheme } from "@mui/material";
 
 // import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+// import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+
 
 const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
   
-
   const columns = [
     // { field: "id", headerName: "ID", flex: 0.5 },
     // { field: "registrarId", headerName: "Registrar ID" },
@@ -30,7 +33,6 @@ const Contacts = () => {
       headerAlign: "left",
       align: "left",
     },
-    
     {
       field: "provider",
       headerName: "Provider",
@@ -41,11 +43,6 @@ const Contacts = () => {
       headerName: "Practice",
       flex: 1,
     },
-    // {
-    //   field: "city",
-    //   headerName: "City",
-    //   flex: 1,
-    // },
     {
       field: "finalReportDate",
       headerName: "Final Report Date",
@@ -68,14 +65,13 @@ const Contacts = () => {
             .forEach(
               (c) => (thisRow[c.field] = params.getValue(params.id, c.field)),
             );
-  
-            // navigate
-          // return alert(JSON.stringify(thisRow, null, 4));
-        };
-  
+      
+          navigate("/view-lab-result");
+        }  
+
         return <Button onClick={onClick} sx={{color: 'blue'}}>View Result</Button>;
       },
-    },
+    }
   ];
 
   return (
@@ -124,21 +120,7 @@ const Contacts = () => {
       </Box>
     </Box>
 
-
-    
   );
 };
-
-// import * as React from 'react';
-// import Stack from '@mui/material/Stack';
-// import Button from '@mui/material/Button';
-
-// export default function BasicButtons() {
-//   return (
-//     <Stack spacing={2} direction="row">     
-//       <Button variant="contained">Contained</Button>
-//     </Stack>
-//   );
-// }
 
 export default Contacts;
