@@ -1,62 +1,84 @@
 import { Box } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar, GridApi, GridCellValue, GridColDef} from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
-const LabResults = () => {
+
+// import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+// import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+
+
+const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  const navigate = useNavigate();
+  
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
+    // { field: "id", headerName: "ID", flex: 0.5 },
+    // { field: "registrarId", headerName: "Registrar ID" },
     {
-      field: "name",
-      headerName: "Name",
+      field: "testName",
+      headerName: "Test Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
-      field: "age",
-      headerName: "Age",
+      field: "serviceDate",
+      headerName: "Service Date",
       type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
-      field: "phone",
-      headerName: "Phone Number",
+      field: "provider",
+      headerName: "Provider",
       flex: 1,
     },
     {
-      field: "email",
-      headerName: "Email",
+      field: "practice",
+      headerName: "Practice",
       flex: 1,
     },
     {
-      field: "address",
-      headerName: "Address",
+      field: "finalReportDate",
+      headerName: "Final Report Date",
       flex: 1,
     },
     {
-      field: "city",
-      headerName: "City",
+      field: "finalResults",
+      headerName: "Final Results",
       flex: 1,
-    },
-    {
-      field: "zipCode",
-      headerName: "Zip Code",
-      flex: 1,
-    },
+      renderCell: (params) => {
+        const onClick = (e) => {
+          e.stopPropagation(); // don't select this row after clicking
+  
+          const { api } = params;
+          const thisRow = {};
+  
+          api
+            .getAllColumns()
+            .filter((c) => c.field !== '__check__' && !!c)
+            .forEach(
+              (c) => (thisRow[c.field] = params.getValue(params.id, c.field)),
+            );
+      
+          navigate("/view-lab-result");
+        }  
+
+        return <Button onClick={onClick} sx={{color: 'blue'}}>View Result</Button>;
+      },
+    }
   ];
 
   return (
     <Box m="20px">
       <Header
-        title="CONTACTS"
-        subtitle="List of Contacts for Future Reference"
+        title="Dan's Laboratory Results"
+        subtitle=""
       />
       <Box
         m="40px 0 0 0"
@@ -94,10 +116,11 @@ const LabResults = () => {
           rows={mockDataContacts}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
-        />
+          />
       </Box>
     </Box>
+
   );
 };
 
-export default LabResults;
+export default Contacts;
