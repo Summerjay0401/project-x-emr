@@ -12,7 +12,7 @@
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     border-radius: 10px;
-    height: 200px;
+    height: 250px;
     flex: 1 0 21%; 
 }
 .widget:hover{
@@ -29,7 +29,7 @@
 .widget .left .title, .widget .right .title {
     font-weight: bold;
     font-size: 15px;
-    color: #a0a0a0;
+    color: black;
     align-self: center;
 }
 

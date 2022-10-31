@@ -22,7 +22,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faUser}
             className="icon"
             style={{
-              color: "#0089D0"
+              color: "#D5D6EA"
             }}
           />
         ),
@@ -36,7 +36,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faCalendarDays}
             className="icon"
             style={{
-              color: "#F6911B"
+              color: "#D7ECD9"
             }}
           />
         ),
@@ -50,7 +50,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faClipboard} 
             className="icon"
                 style={{
-                    color: "green"
+                    color: "#F5D5CB"
                 }}
           />
         ),
@@ -64,7 +64,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faFlask}
             className="icon"
             style={{
-              color: "purple"
+              color: "#89C5D3"
             }}
           />
         ),
@@ -79,7 +79,7 @@ const Widget = ({ type }) => {
                 className="icon"
                 size="lg"
             style={{
-            color: "crimson"
+            color: "#E8ACBD"
             }} />
         ),
     };
@@ -92,7 +92,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faEnvelope}
             className="icon"
             style={{
-            color: "#6460AA"
+            color: "#8C9DCF"
             }}
         />
         ),
@@ -106,7 +106,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faUserDoctor}
             className="icon"
             style={{
-            color: "#00A9A4"
+            color: "#89C5D3"
             }}
         />
         ),
@@ -120,7 +120,7 @@ const Widget = ({ type }) => {
             <FontAwesomeIcon icon={faCreditCard}
             className="icon"
             style={{
-            color: "#434343"
+            color: "#9F9BB0"
             }}
         />
         ),
