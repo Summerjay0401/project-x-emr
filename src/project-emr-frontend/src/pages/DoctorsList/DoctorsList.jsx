@@ -8,8 +8,7 @@ const DoctorsList = () => {
   return (
     <div>
       <PageTitle title="Medical Center 👨🏻‍⚕️ Find your Doctor Here" />
-      <Link to="/">
-        <Button variant="outlined">Go Back</Button>
+      <Link to="/"><Button variant="outlined">Go Back</Button>
       </Link>
     </div>
   )

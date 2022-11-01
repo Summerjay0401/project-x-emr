@@ -4,6 +4,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 import {
   Box,
   List,
@@ -124,6 +126,7 @@ const Scheduler = () => {
           />
         </Box>
       </Box>
+      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
     </Box>
   );
 };
