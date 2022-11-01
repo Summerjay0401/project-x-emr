@@ -21,6 +21,7 @@
     "@mui/styled-engine": "^5.10.8",
     "@mui/styles": "^5.10.10",
     "@mui/x-data-grid": "^5.17.9",
+    "@react-google-maps/api": "^2.13.1",
     "@stripe/react-stripe-js": "^1.14.1",
     "@stripe/stripe-js": "^1.42.0",
     "@testing-library/jest-dom": "^5.16.5",
