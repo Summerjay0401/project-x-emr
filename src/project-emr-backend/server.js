@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
+require('dotenv').config();
+
 const app = express();
 
 var corsOptions = {
@@ -28,12 +30,13 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to application." });
 });
 
 // routes
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require('./app/routes/payment.routes')(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
