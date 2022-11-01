@@ -215,7 +215,7 @@ const Sidebar = () => {
             />
             <Item
               title="Logout"
-              to="/logout"
+              to="/login"
               icon={<ExitToAppIcon className="icon" />}
               selected={selected}
               setSelected={setSelected}
