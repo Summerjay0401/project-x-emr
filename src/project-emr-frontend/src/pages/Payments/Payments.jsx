@@ -8,6 +8,8 @@ import { loadStripe } from "@stripe/stripe-js";
 
 import axios, { authHeader } from "../../api";
 
+import './Payments.css';
+
 function Payments() {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
