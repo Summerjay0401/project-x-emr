@@ -142,7 +142,7 @@ const MyMedications = () => {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell/>
+              <TableCell />
               <TableCell className={classes.root}><WbSunnyIcon fontSize='large' style={{ color: "#b2a429" }}/></TableCell>
               <TableCell className={classes.root}><WbTwilightIcon fontSize='large' style={{ color: "#b26a00" }}/></TableCell>
               <TableCell className={classes.root}><NightsStayIcon fontSize='large' style={{ color: "#2c387e" }} /></TableCell>
@@ -151,12 +151,12 @@ const MyMedications = () => {
             </TableRow>
             <TableRow className={classes.root}>
               <TableCell />
-              <TableCell className={classes.root}>MEDICATION NAME</TableCell>
-              <TableCell className={classes.root}>MORNING</TableCell>
-              <TableCell className={classes.root}>AFTERNOON</TableCell>
-              <TableCell className={classes.root}>NIGHT</TableCell>
-              <TableCell className={classes.root}>BEDTIME</TableCell>
-              <TableCell className={classes.root}>AS NEEDED</TableCell>
+                <TableCell className={classes.root}>MEDICATION NAME</TableCell>
+                <TableCell className={classes.root}>MORNING</TableCell>
+                <TableCell className={classes.root}>AFTERNOON</TableCell>
+                <TableCell className={classes.root}>NIGHT</TableCell>
+                <TableCell className={classes.root}>BEDTIME</TableCell>
+                <TableCell className={classes.root}>AS NEEDED</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

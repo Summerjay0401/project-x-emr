@@ -8,7 +8,7 @@ const Dashboard = () => {
   return (
     <div>
       <Box m="20px"></Box>
-      <Header title="Welcome Summer!" subtitle="Dashboard" />
+      <Header title="Welcome Dan Ross!" subtitle="Dashboard" />
       
         <div className="widgets">
           <Widget type="my-profile" />
