@@ -112,10 +112,10 @@ const Widget = ({ type }) => {
         ),
     };
     break;  
-    case "payments":
+    case "billing":
     data = {
-      title: "PAYMENTS",
-      link: "payments",
+      title: "BILLING",
+      link: "billing",
         icon: (
             <FontAwesomeIcon icon={faCreditCard}
             className="icon"

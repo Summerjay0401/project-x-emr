@@ -192,8 +192,8 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Payments"
-              to="/payments"
+              title="Billing"
+              to="/billing"
               icon={<FontAwesomeIcon icon={faCreditCard} className="icon" />}
               selected={selected}
               setSelected={setSelected}
