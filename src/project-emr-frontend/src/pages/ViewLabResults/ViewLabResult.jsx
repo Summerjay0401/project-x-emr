@@ -7,85 +7,93 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { styled } from '@mui/material/styles';
+import Slider from '@mui/material/Slider';
 
+const Separator = styled('div')(
+  ({ theme }) => `
+  height: ${theme.spacing(3)};
+`,
+);
 
-import { useNavigate } from "react-router-dom";
-
-// import "./Widget.css";
-
-// const Widget = ({ type }) => {
-//   const navigate = useNavigate();
-//   let data;
-
-  // function ViewResult() {
-  //   let navigate = useNavigate();
-  //   return (
-  //       <div>
-  //           < ViewLabResult 
-  //           on submit = { () => {
-  //             navigate ('./ViewLabResult');  
-  //               }
-  //           }
-  //           />
-  //       </div>
-  //   );
-  // }
-  
-
-  // switch (type) {
-  //   case "my-profile":
-  //     data = {
-  //       title: "View Results",
-  //       link: "/ViewLabResult",
-  //     };
-
-const columns = [
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
+const marks = [
   {
-    id: 'population',
-    label: 'Population',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
+    value: 0,
+    label: '0',
   },
   {
-    id: 'size',
-    label: 'Size\u00a0(km\u00b2)',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
+    value: '',
+    label: '',
   },
   {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
+    value: '50',
+    label: 'mg/dL',
+  },
+  {
+    value: 100,
+    label: '100',
   },
 ];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
+function valuetext(value) {
+  return `${value}°C`;
+}
+
+const columns = [
+  { id: 'name', label: 'Test Name', minWidth: 50 },
+  { id: 'result', label: 'Current Result', minWidth: 50 },
+  {
+    id: 'unit',
+    label: 'High/Low',
+    minWidth: 50,
+    align: 'left',
+    format: (value) => value.toLocaleString('en-US'),
+  },
+  {
+    id: 'reference',
+    label: 'Reference Interval and Units',
+    minWidth: 70,
+    align: 'left',
+    format: (value) => {
+      return <Slider
+      track="inverted"
+      aria-labelledby="track-inverted-slider"
+      getAriaValueText={valuetext}
+      defaultValue={30}
+      marks={marks}
+    />
+    },
+  },
+  // {
+  //   id: 'density',
+  //   label: 'Density',
+  //   minWidth: 170,
+  //   align: 'right',
+  //   format: (value) => value.toFixed(2),
+  // },
+];
+
+function createData(name, result, unit, reference) {
+  // const density = population / size;
+  return { name, result, unit, reference};
 }
 
 const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767),
+  createData('Iron', '191', 'High', 3287263),
+  createData('Ferritin', '100', '', 9596961),
+  createData('RDW', '11.4', 'Low', 301340),
+  createData('Platelets', '235', 'High', 9833520),
+  createData('Glucose', '85', '', 9984670),
+  createData('Creatinine', '0.64', '', 7692024),
+  createData('Potassium', '4.7', '', 357578),
+  createData('Calcium', '9.0', '', 70273),
+  createData('Chloride', '102', '', 1972550),
+  createData('HDL Cholesterol', '30', 'Low', 377973),
+  createData('VLDL Cholesterol Cal', '18', '', 640679),
+  createData('Vitamin B12', '1692', 'High', 242495),
+  createData('Triglycerides', '100', '', 17098246),
+  createData('Cholesterol', '191', '', 923768),
+  createData('TSH', '2.230', '', 8515767),
 ];
 
 const ViewLabResult = () => {
@@ -128,7 +136,7 @@ const ViewLabResult = () => {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === 'number'
+                          {column.format
                             ? column.format(value)
                             : value}
                         </TableCell>
