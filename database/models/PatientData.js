@@ -10,6 +10,19 @@ const patientDataSchema = new Schema({
     age: {
       type: Integer,
       required: true,
+    },
+    birthday: {
+      type: Integer,
+      required: true,
+      
+    },
+    weight: {
+      type: Integer,
+      required: true,
+    }
+    notes: {
+      type: String,
+      required: true,
     }
 
 })
