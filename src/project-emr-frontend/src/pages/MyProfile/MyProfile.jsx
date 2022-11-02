@@ -15,6 +15,11 @@ import MedicationIcon from "@mui/icons-material/Medication";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 
+import ProfilePic from "../../assets/images/dan-profile-pic.png";
+import BpIcon from "../../assets/images/bp-icon.jpg";
+import BSugarIcon from "../../assets/images/bsugar-icon.jpg";
+import PulseIcon from "../../assets/images/pulse-icon.png";
+
 export default function myProfile() {
   return (
     <div>
@@ -29,8 +34,8 @@ export default function myProfile() {
                 <Grid item xs={6}>
                   <CardContent>
                     <Avatar
-                      alt="Stone Cold"
-                      src="https://www.biography.com/.image/t_share/MTc5NjI0MTYxOTgxNzY4Nzgz/austin11.jpg"
+                      alt="dan"
+                      src={ProfilePic}
                       sx={{ width: 100, height: 100 }}
                     />
                     <Typography gutterBottom variant="h5" component="div">
@@ -216,9 +221,49 @@ export default function myProfile() {
                       justifyContent: "space-between",
                     }}
                   >
-                    <ListItemText> Blood Pressure </ListItemText>
-                    <ListItemText> Pulse </ListItemText>
-                    <ListItemText> Blood Sugar </ListItemText>
+                    <ListItemText
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      {" "}
+                      <Avatar
+                        alt="blood pressure"
+                        src={BpIcon}
+                        variant="square"
+                        sx={{ width: 100, height: 100 }}
+                      />{" "}
+                      Blood Pressure <br />
+                      150/80
+                    </ListItemText>
+                    <ListItemText
+                      sx={{ justifyContent: "center", alignItems: "center" }}
+                    >
+                      {" "}
+                      <Avatar
+                        alt="pulse"
+                        src={PulseIcon}
+                        variant="square"
+                        sx={{ width: 100, height: 100 }}
+                      />{" "}
+                      Pulse <br />
+                      120bpm
+                    </ListItemText>
+                    <ListItemText
+                      sx={{ justifyContent: "center", alignItems: "center" }}
+                    >
+                      {" "}
+                      <Avatar
+                        alt="blood sugar"
+                        src={BSugarIcon}
+                        variant="square"
+                        sx={{ width: 100, height: 100 }}
+                      />{" "}
+                      Blood Sugar <br />
+                      130 mg/dL
+                    </ListItemText>
                   </List>
                 </Typography>
               </CardContent>
