@@ -7,15 +7,6 @@
   --radius: 3px;
 }
 
-body {
-  padding: 20px;
-  font-family: "Raleway";
-  display: flex;
-  justify-content: center;
-  font-size: 1.2em;
-  color: var(--dark-terminal-color);
-}
-
 main {
   width: 480px;
 }
