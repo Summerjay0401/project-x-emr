@@ -1,46 +1,38 @@
 import React from 'react';
 import PageTitle from '../../components/PageTitle';
-import { Link } from 'react-router-dom'
-import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import './Billing.css';
+
 const Billing = () => {
-    const bull = (
-        <Box
-          component="span"
-          sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-        >
-          •
-        </Box>
-      );
-    return (
+ return (
         <div>
-            <PageTitle title="Pay here" />
+            <PageTitle title="Billing" />
+        
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        Word of the Day
+                    <Typography className="label-align-center card-billing" sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
+                    UPENN MEDICAL CENTER
                     </Typography>
-                    <Typography variant="h5" component="div">
-                        be{bull}nev{bull}o{bull}lent
+                    <Typography className="label-align-center guarantor" sx={{ mb: 1.5 }} color="text.secondary">
+                    Guarantor #23456734 (Dan Ross)
                     </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        adjective
+                    <Typography className="label-align-center amount-text" variant="body2" sx={{fontSize: 18, color: "black"}}>
+                    Amount Due
                     </Typography>
-                    <Typography variant="body2">
-                        well meaning and kindly.
-                        <br />
-                        {'"a benevolent smile"'}
+                    <Typography className="label-align-center amount-value" variant="body2" sx={{fontSize: 18, color: "green"}}>
+                    {'$100.00'}
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button size="small">Learn More</Button>
+                <CardActions sx={{justifyContent: 'center'}}>
+                    <Button size="large">Pay Now</Button>
                 </CardActions>
-            </Card>
+                </Card>
             <Link to="/"><Button variant="outlined">Go Back</Button></Link>
         </div>
     );
