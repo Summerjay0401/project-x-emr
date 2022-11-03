@@ -21,7 +21,7 @@ export default function ControlledAccordions() {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+            Dr.Summer Jade Rimorin
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
         </AccordionSummary>
@@ -39,7 +39,7 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>Dr. Dan Ross</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             You are currently not an owner
           </Typography>
@@ -60,7 +60,7 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Advanced settings
+            Dr. Jovy Ira Naraga
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             Filtering has been entirely disabled for whole web server
@@ -74,18 +74,41 @@ export default function ControlledAccordions() {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Personal data</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>
+            Dr.Summer Jade Rimorin
+          </Typography>
+          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
+            Aliquam eget maximus est, id dignissim quam.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+        >
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>Dr. Dan Ross</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>
+            You are currently not an owner
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
+            varius pulvinar diam eros in elit. Pellentesque convallis laoreet
+            laoreet.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -97,27 +120,11 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Advanced settings
+            Dr. Jovy Ira Naraga
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             Filtering has been entirely disabled for whole web server
           </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
-        >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Personal data</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
