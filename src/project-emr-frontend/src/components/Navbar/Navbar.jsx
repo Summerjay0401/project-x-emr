@@ -4,7 +4,7 @@ import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import Notification from "@mui/icons-material/NotificationsOutlined";
+import Notifications from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import AuthDropdown from '../AuthDropdown'
@@ -39,7 +39,7 @@ const Navbar = () => {
           )}
         </IconButton>
         <IconButton>
-          <Notification />
+          <Notifications />
         </IconButton>
         <IconButton>
           <SettingsOutlinedIcon />

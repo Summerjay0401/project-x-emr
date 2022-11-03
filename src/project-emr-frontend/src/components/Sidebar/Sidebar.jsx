@@ -187,7 +187,7 @@ const Sidebar = () => {
               Services
             </Typography>
             <Item
-              title="Chat with my Provider"
+              title="Provider List"
               to="/telehealth"
               icon={<FontAwesomeIcon icon={faUserDoctor} className="icon" />}
               selected={selected}
