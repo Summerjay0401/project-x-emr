@@ -8,10 +8,11 @@ type User {
 type PatientData {
     firstName: String
     lastName: String
-    age: Number
-    birthday: Number
-    weight: Number 
-    height: Number
+    age: Integer
+    birthday: Date
+    gender: String
+    weight: Integer 
+    height: Integer
     address: String 
     email: String 
     notes: String
