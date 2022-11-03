@@ -11,8 +11,6 @@ import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {useNavigate} from "react-router-dom";
 import JumboDdPopover from "./CustomPopover";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import { Link } from "react-router-dom";
 import './AuthDropdown.css'
 
 // import useJumboTheme from "@jumbo/hooks/useJumboTheme";
@@ -49,24 +47,23 @@ const AuthUserDropdown = () => {
                 <Divider/>
                 <nav>
                     <List disablePadding sx={{pb: 1}}>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/my-profile")} >
                             <ListItemIcon sx={{minWidth: 36}}>
                                 <PersonOutlineIcon/>
                             </ListItemIcon>
-                            <Link to="/my-profile" className='link'><ListItemText primary="Profile" sx={{my: 0}}/></Link>
+                            <ListItemText primary="Profile" sx={{my: 0}}/>
                         </ListItemButton>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/my-profile")} >
                             <ListItemIcon sx={{minWidth: 36}}>
                                 <EditOutlinedIcon/>
                             </ListItemIcon>
-                            <Link to="/my-profile" underline='hover'><ListItemText primary="Edit Profile" sx={{my: 0}}/></Link>
+                            <ListItemText primary="Edit Profile" sx={{my: 0}}/>
                         </ListItemButton>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/samples/content-layout")} >
                             <ListItemIcon sx={{minWidth: 36}}>
                                 <RepeatOutlinedIcon/>
                             </ListItemIcon>
-                            <ListItemText onClick={() => navigate("/samples/content-layout")} primary="Switch User"
-                                          sx={{my: 0}}/>
+                            <ListItemText primary="Switch User" sx={{my: 0}}/>
                         </ListItemButton>
                         <ListItemButton onClick={onLogout}>
                             <ListItemIcon sx={{minWidth: 36}}>
