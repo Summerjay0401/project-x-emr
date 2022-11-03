@@ -11,6 +11,7 @@ import Telehealth from "../pages/Telehealth";
 import Payments from "../pages/Payments";
 import ViewLabResult from "../pages/ViewLabResults";
 import Billing from "../pages/Billing/Billing";
+import Notifications from "../pages/Notifications";
 
 import { ProtectedRoute } from "./protectedRoute";
 import Signup from "../pages/Signup/Signup";
@@ -85,6 +86,12 @@ const Router = () => {
       <Route element={<ProtectedRoute />}>
         <Route path="/view-lab-result" element={<Layout />}>
           <Route path="/view-lab-result" element={<ViewLabResult />} />
+        </Route>
+      </Route>
+
+      <Route element={<ProtectedRoute />}>
+        <Route path="/notifications" element={<Layout />}>
+          <Route path="/notifications" element={<Notifications />} />
         </Route>
       </Route>
 

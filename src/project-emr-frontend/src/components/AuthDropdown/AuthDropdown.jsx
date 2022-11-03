@@ -12,6 +12,8 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import {useNavigate} from "react-router-dom";
 import JumboDdPopover from "./CustomPopover";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import { Link } from "react-router-dom";
+import './AuthDropdown.css'
 
 // import useJumboTheme from "@jumbo/hooks/useJumboTheme";
 // import useJumboAuth from "@jumbo/hooks/useJumboAuth";
@@ -51,13 +53,13 @@ const AuthUserDropdown = () => {
                             <ListItemIcon sx={{minWidth: 36}}>
                                 <PersonOutlineIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Profile" sx={{my: 0}}/>
+                            <Link to="/my-profile" className='link'><ListItemText primary="Profile" sx={{my: 0}}/></Link>
                         </ListItemButton>
                         <ListItemButton>
                             <ListItemIcon sx={{minWidth: 36}}>
                                 <EditOutlinedIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Edit Profile" sx={{my: 0}}/>
+                            <Link to="/my-profile" underline='hover'><ListItemText primary="Edit Profile" sx={{my: 0}}/></Link>
                         </ListItemButton>
                         <ListItemButton>
                             <ListItemIcon sx={{minWidth: 36}}>
