@@ -7,6 +7,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
+
 import './Billing.css';
 
 const Billing = () => {
@@ -30,7 +31,7 @@ const Billing = () => {
                     </Typography>
                 </CardContent>
                 <CardActions sx={{justifyContent: 'center'}}>
-                    <Button size="large">Pay Now</Button>
+                <Link to="/payments"><Button size="large">Pay Now</Button></Link>
                 </CardActions>
                 </Card>
             <Link to="/"><Button variant="outlined">Go Back</Button></Link>
