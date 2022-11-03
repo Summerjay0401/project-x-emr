@@ -11,6 +11,7 @@ import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {useNavigate} from "react-router-dom";
 import JumboDdPopover from "./CustomPopover";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import './AuthDropdown.css'
 
 // import useJumboTheme from "@jumbo/hooks/useJumboTheme";
