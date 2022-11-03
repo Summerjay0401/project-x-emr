@@ -15,7 +15,19 @@ type PatientData {
     height: Integer
     address: String 
     email: String 
+    primaryPhone: Integer
+    alternativePhone: Integer
+    currentMedications: String
     notes: String
+    icd10Code: String
+    diagnosis: String
+    dateofDiagnosis: Date
+    providerName: String
+    providerPhoneNumber: Integer
+    insurancePlan: String
+    memberId: Integer
+    groupId: Integer
+    providerServicesNumber: Integer
 }
 
 type Appointments {
