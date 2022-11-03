@@ -81,7 +81,7 @@ const patientDataSchema = new Schema({
 
     },
     providerPhoneNumber: {
-      type: Integer
+      type: Integer,
 
     },
   insurancePlan: {
