@@ -21,7 +21,7 @@ const patientDataSchema = new Schema({
     }, 
     gender: { 
       type: String,
-        enum: "male"||"female" 
+        enum: ["male"||"female" ],
     }, 
     
     weight: {
@@ -66,30 +66,42 @@ const patientDataSchema = new Schema({
       trim: true,
     },
     icd10Code: {
+      type: String,
 
     },
     diagnosis: {
-
+      type: String,
     },
     dateOfDiagnosis: {
+      Type: Date,
 
     },
     providerName: {
+      type: String,
 
     },
     providerPhoneNumber: {
+      type: Integer
 
     },
   insurancePlan: {
+      type: String, 
 
   },
   memberId: {
+    type: Integer,
+    required: true,
+    unique: true,
 
   },
   groupId: {
+    type: Integer,
+    required: true,
+    unique: true,
 
   },
   providerServicesNumber: {
+    type: Integer
 
   },
 
