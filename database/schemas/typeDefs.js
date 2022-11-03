@@ -2,6 +2,10 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql
 
 type User {
+    name: String
+    email:String
+    password: String
+    patientId: Integer
 
 }
 
@@ -30,6 +34,3 @@ type PatientData {
     providerServicesNumber: Integer
 }
 
-type Appointments {
-
-}
