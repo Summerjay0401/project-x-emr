@@ -12,25 +12,32 @@ const patientDataSchema = new Schema({
     trim: true
   },
     age: {
-      type: Number,
+      type: Integer,
       required: true,
     },
     birthday: {
-      type: Number,
+      type: Date,
       required: true,
-      
-    },
+    }, 
+    gender: { 
+      type: String,
+        enum: "male"||"female" 
+    }, 
+    
     weight: {
-      type: Number,
+      type: Integer,
       required: true,
     },
 
     height: {
-      type: Number,
+      type: Integer,
       required: true,
     },
 
     address: {
+      type: String,
+      required: true,
+      trim: true,
 
     },
     email: {
@@ -40,15 +47,17 @@ const patientDataSchema = new Schema({
       match: [/.+@.+\..+/, 'Must match an email address!'],
     },
 
-    phoneNumber: {
+    primaryPhone: {
+      type: Integer
 
     },
 
-    alternativeNumber: {
-
+    alternativePhone: {
+      type: Integer
     },
     
     currentMedications: {
+      type: String
 
     },
     notes: {
@@ -56,7 +65,33 @@ const patientDataSchema = new Schema({
       required: true,
       trim: true,
     },
+    icd10Code: {
 
+    },
+    diagnosis: {
+
+    },
+    dateOfDiagnosis: {
+
+    },
+    providerName: {
+
+    },
+    providerPhoneNumber: {
+
+    },
+  insurancePlan: {
+
+  },
+  memberId: {
+
+  },
+  groupId: {
+
+  },
+  providerServicesNumber: {
+
+  },
 
 })
 
