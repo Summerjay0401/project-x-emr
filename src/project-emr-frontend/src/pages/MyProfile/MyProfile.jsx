@@ -27,8 +27,8 @@ export default function myProfile() {
 
       {/* testing grid */}
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={8}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} sm={12}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <Grid sx={{ margin: "5px" }} container spacing={2}>
                 <Grid item xs={6}>
@@ -40,12 +40,14 @@ export default function myProfile() {
                     />
                     <Typography gutterBottom variant="h5" component="div">
                       {" "}
-                      Name{" "}
+                      Name <br></br>
+                      Dan Ross
                     </Typography>
                     <Typography
                       sx={{
                         display: "flex",
                         flexWrap: "wrap",
+                        flexDirection: "column",
                         justifyContent: "space-between",
                         maxWidth: 170,
                       }}
@@ -55,6 +57,10 @@ export default function myProfile() {
                       <List>
                         <ListItemText> Date of Birth </ListItemText>
                         <ListItemText> 12/31/1999 </ListItemText>
+                      </List>
+                      <List>
+                        <ListItemText> Gender </ListItemText>
+                        <ListItemText> Male </ListItemText>
                       </List>
                       <List>
                         <ListItemText> Weight </ListItemText>
@@ -89,11 +95,11 @@ export default function myProfile() {
                         <ListItemText> 12/31/1999 </ListItemText>
                       </List>
                       <List>
-                        <ListItemText> Primary Phone # </ListItemText>
+                        <ListItemText> Primary Phone Number </ListItemText>
                         <ListItemText> 917-778-9881 </ListItemText>
                       </List>
                       <List>
-                        <ListItemText> Alternative Phone # </ListItemText>
+                        <ListItemText> Alternative Phone Number </ListItemText>
                         <ListItemText> 347-654-9876 </ListItemText>
                       </List>
                       <List>
@@ -106,7 +112,7 @@ export default function myProfile() {
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -134,13 +140,13 @@ export default function myProfile() {
                     <ListItemText> Diagnosis </ListItemText>
                     <ListItemText> Date of Diagnosis </ListItemText>
                     <ListItemText> Provider Name </ListItemText>
-                    <ListItemText> Provider Phone # </ListItemText>
+                    <ListItemText> Provider Phone Number </ListItemText>
                   </List>
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -162,7 +168,7 @@ export default function myProfile() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -197,7 +203,7 @@ export default function myProfile() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -269,7 +275,7 @@ export default function myProfile() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={6}>
             <Card sx={{ display: "flex", margin: "5px" }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -306,7 +312,9 @@ export default function myProfile() {
       </Box>
 
       <Link to="/">
-        <Button variant="outlined">Go Back</Button>
+        <Button sx={{ margin: "15px" }} variant="outlined">
+          Go Back
+        </Button>
       </Link>
     </div>
   );
