@@ -1,29 +1,62 @@
 const { Schema, model } = require('mongoose');
 
 const patientDataSchema = new Schema({
-    name: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-    },
+  firstName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastName: {
+    type: String,
+    required: true,
+    trim: true
+  },
     age: {
-      type: Integer,
+      type: Number,
       required: true,
     },
     birthday: {
-      type: Integer,
+      type: Number,
       required: true,
       
     },
     weight: {
-      type: Integer,
+      type: Number,
       required: true,
-    }
+    },
+
+    height: {
+      type: Number,
+      required: true,
+    },
+
+    address: {
+
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      match: [/.+@.+\..+/, 'Must match an email address!'],
+    },
+
+    phoneNumber: {
+
+    },
+
+    alternativeNumber: {
+
+    },
+    
+    currentMedications: {
+
+    },
     notes: {
       type: String,
       required: true,
-    }
+      trim: true,
+    },
+
 
 })
 
