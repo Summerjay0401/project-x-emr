@@ -133,7 +133,7 @@ export default function ControlledAccordions() {
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Filtering has been entirely disabled for whole web server
+            ""
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

@@ -83,7 +83,7 @@ const ProgressNotes = () => {
             color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: colors.greenAccent[500],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
@@ -91,7 +91,7 @@ const ProgressNotes = () => {
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: colors.greenAccent[500],
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
