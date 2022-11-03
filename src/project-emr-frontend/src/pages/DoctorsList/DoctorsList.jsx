@@ -16,7 +16,7 @@ export default function DoctorsList() {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item lg={2}  xs={3} md={2.4}>
+        <Grid item lg={2} xs={3} md={2.4}>
           <Card sx={{ maxWidth: 180 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -41,7 +41,7 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item lg={2}  xs={3} md={2.4}>
+        <Grid item lg={2} xs={3} md={2.4}>
           <Card sx={{ maxWidth: 190 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -66,7 +66,7 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg= {2}>
+        <Grid item xs={3} md={2.4} lg={2}>
           <Card sx={{ maxWidth: 190 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -77,7 +77,7 @@ export default function DoctorsList() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Dr. Summer Jade Rosal 
+                Dr. Summer Jade Rosal
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Dentist
@@ -102,7 +102,7 @@ export default function DoctorsList() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Dr. Joseph Leano 
+                Dr. Joseph Leano
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Dermotologist
@@ -116,7 +116,7 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}> 
+        <Grid item xs={3} md={2.4} lg={2}>
           <Card sx={{ maxWidth: 190 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -130,7 +130,7 @@ export default function DoctorsList() {
                 Dr. Ahmadu Jalloh
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                BDS MDS - Cardiologist 
+                BDS MDS - Cardiologist
                 and Oral implantology. 15 Years
                 experience.
               </Typography>
@@ -141,7 +141,7 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}md={2.4} lg={2}>
+        <Grid item xs={3} md={2.4} lg={2}>
           <Card sx={{ maxWidth: 190 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -166,7 +166,7 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}md={2.4} lg= {2}>
+        <Grid item xs={3} md={2.4} lg={2}>
           <Card sx={{ maxWidth: 190 }}>
             <CardActionArea></CardActionArea>
             <CardMedia
