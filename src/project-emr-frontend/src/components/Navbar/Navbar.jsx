@@ -4,10 +4,11 @@ import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import Notification from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import AuthDropdown from '../AuthDropdown'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -38,7 +39,7 @@ const Navbar = () => {
           )}
         </IconButton>
         <IconButton>
-          <NotificationsOutlinedIcon />
+          <Notification />
         </IconButton>
         <IconButton>
           <SettingsOutlinedIcon />
