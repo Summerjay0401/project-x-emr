@@ -1,14 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const patientDataSchema = new Schema({
-  firstName: {
-    type: String,
-    trim: true
-  },
-  lastName: {
-    type: String,
-    trim: true
-  },
+    _id: {
+      type: Schema.types.ObjectId
+    },
+
     age: {
       type: Number,
      
