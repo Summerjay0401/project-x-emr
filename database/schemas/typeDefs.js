@@ -1,5 +1,5 @@
 const { gql } = require('apollo-server-express');
-const typeDefs = gql
+const typeDefs = gql`
 
 type User {
     name: String
@@ -12,25 +12,44 @@ type User {
 type PatientData {
     firstName: String
     lastName: String
-    age: Integer
+    age: Number
     birthday: Date
     gender: String
-    weight: Integer 
-    height: Integer
+    weight: Number 
+    height: Number
     address: String 
     email: String 
-    primaryPhone: Integer
-    alternativePhone: Integer
+    primaryPhone: Number
+    alternativePhone: Number
     currentMedications: String
     notes: String
     icd10Code: String
     diagnosis: String
     dateofDiagnosis: Date
     providerName: String
-    providerPhoneNumber: Integer
+    providerPhoneNumber: Number
     insurancePlan: String
-    memberId: Integer
-    groupId: Integer
-    providerServicesNumber: Integer
+    memberId: Number
+    groupId: Number
+    providerServicesNumber: Number
 }
+type Auth {
+    token: ID!
+    user: User
+}
+typeQuery {
+    getUsers: [User]
+    getUser:(email: String!): User
+    getPatientData: [PatientData]
+}
+typeMutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, firstName: String!, lastName: String!, password: String!): Auth
+    createPatientData: (firstName: String, lastName: String, age: Number, birthday: Date, gender: String, weight: Number, height: Number, address: String ,
+        email: String ,primaryPhone: Number, alternativePhone: Number, currentMedications: String, notes: String, icd10Code: String, diagnosis: String, 
+        dateofDiagnosis: Date, providerName: String, providerPhoneNumber: Number, insurancePlan: String, memberId: Number, groupId: Number, 
+        providerServicesNumber: Number
+}
+`
+module.exports = typeDefs
 
