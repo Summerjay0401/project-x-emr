@@ -8,23 +8,24 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from "@mui/material";
 
+import { CardHeader } from '@mui/material';
+import "./DoctorsList.css";
 export default function DoctorsList() {
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item lg={2}  xs={3} md={2.4}>
-          <Card sx={{ maxWidth: 180 }}>
-            <CardActionArea></CardActionArea>
+        <Grid item lg={2} xs={6} md={2.4}>
+          <Card sx={{ maxWidth: 180 }} className='cardList'>
+            {/* <CardActionArea></CardActionArea> */}
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
-              image="https://source.unsplash.com/random"
-            />
+              height="120"
+             image="https://source.unsplash.com/random"
+             className="img1"/>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Dr. Dan Ross
@@ -41,18 +42,18 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item lg={2}  xs={3} md={2.4}>
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item lg={2} xs={6} md={2.4}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Dr. Dan Ross
+                Dr. Alvin Pollard
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Periodontology
@@ -66,18 +67,18 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg= {2}>
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item xs={6} md={2.4} lg={2}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Dr. Summer Jade Rosal 
+                Dr. Summer J Rosal
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Dentist
@@ -91,18 +92,18 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item xs={6} md={2.4} lg={2}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Dr. Joseph Leano 
+                Dr. Joseph Leano
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Dermotologist
@@ -116,13 +117,13 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}> 
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item xs={6} md={2.4} lg={2}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
@@ -130,7 +131,7 @@ export default function DoctorsList() {
                 Dr. Ahmadu Jalloh
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                BDS MDS - Cardiologist 
+                BDS MDS - Cardiologist
                 and Oral implantology. 15 Years
                 experience.
               </Typography>
@@ -141,13 +142,13 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item xs={6} md={2.4} lg={2}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
@@ -166,13 +167,13 @@ export default function DoctorsList() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}md={2.4} lg= {2}>
-          <Card sx={{ maxWidth: 190 }}>
+        <Grid item xs={6} md={2.4} lg={2}>
+          <Card sx={{ maxWidth: 180 }}className='cardList'>
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="140"
+              height="120"
               image="https://source.unsplash.com/random"
             />
             <CardContent>
