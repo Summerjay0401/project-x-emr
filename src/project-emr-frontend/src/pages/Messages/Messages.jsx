@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import { Grid } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import "./Messages.css";
 
 //Firebase Imports
 import firebase from "firebase/compat/app";
@@ -38,7 +41,6 @@ const Messages = () => {
     }, []);
     return (
       <div>
-        <SignOut />
         <div className="msgs">
           {messages.map(({ id, text, photoURL, uid }) => (
             <div>
@@ -48,7 +50,7 @@ const Messages = () => {
                   uid === auth.currentUser.uid ? "sent" : "received"
                 }`}
               >
-                <img src={photoURL} alt="" />
+                <Avatar src={photoURL} sx={{ width: 50, height: 50 }} />
                 <p>{text}</p>
               </div>
             </div>
@@ -56,6 +58,7 @@ const Messages = () => {
         </div>
         <SendMessage scroll={scroll} />
         <div ref={scroll}></div>
+        <SignOut />
       </div>
     );
   }
@@ -91,24 +94,13 @@ const Messages = () => {
 
   function SignOut() {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          position: "fixed",
-          width: "100%",
-          backgroundColor: "#FAFAFA",
-          top: 0,
-          borderBottom: "solid 1px lightgray",
-          zIndex: "10",
-        }}
-      >
+      <div>
         <Button
           style={{
-            padding: "20px",
             fontSize: "15px",
-            borderRadius: "0",
-            fontWeight: "600",
+            fontWeight: "550",
+            margin: "4px 5% -13px 5%",
+            maxWidth: "200px",
           }}
           onClick={() => auth.signOut()}
         >
@@ -171,7 +163,11 @@ const Messages = () => {
 
   return (
     <div>
-      <>{user ? <Chat /> : <SignIn />}</>
+      <Grid container spacing={3.75}>
+        <Grid item xs={12} sm={6} lg={3}>
+          <>{user ? <Chat /> : <SignIn />}</>
+        </Grid>
+      </Grid>
     </div>
   );
 };
