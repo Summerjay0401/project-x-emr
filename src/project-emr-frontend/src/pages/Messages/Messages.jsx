@@ -41,7 +41,12 @@ const Messages = () => {
     }, []);
     return (
       <div>
-        <div className="msgs">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           {messages.map(({ id, text, photoURL, uid }) => (
             <div>
               <div
@@ -96,11 +101,11 @@ const Messages = () => {
     return (
       <div>
         <Button
+          variant="outlined"
           style={{
             fontSize: "15px",
             fontWeight: "550",
-            margin: "4px 5% -13px 5%",
-            maxWidth: "200px",
+            minWidth: "100px",
           }}
           onClick={() => auth.signOut()}
         >
@@ -129,28 +134,26 @@ const Messages = () => {
     return (
       <div>
         <form onSubmit={sendMessage}>
-          <div className="sendMsg">
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
             <TextField
-              style={{
-                width: "78%",
-                fontSize: "15px",
-                fontWeight: "550",
-                marginLeft: "5px",
-                marginBottom: "-3px",
-              }}
+              style={{ minWidth: "40vw" }}
+              id="outlined-multiline-static"
+              label="Multiline"
+              multiline
+              rows={4}
+              defaultValue="Default Value"
               placeholder="Message..."
               type="text"
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
             />
             <Button
-              style={{
-                width: "18%",
-                fontSize: "15px",
-                fontWeight: "550",
-                margin: "4px 5% -13px 5%",
-                maxWidth: "200px",
-              }}
+              style={{ fontSize: "15px", fontWeight: "550" }}
+              variant="outlined"
               type="submit"
             >
               Send
@@ -163,11 +166,7 @@ const Messages = () => {
 
   return (
     <div>
-      <Grid container spacing={3.75}>
-        <Grid item xs={12} sm={6} lg={3}>
-          <>{user ? <Chat /> : <SignIn />}</>
-        </Grid>
-      </Grid>
+      <>{user ? <Chat /> : <SignIn />}</>
     </div>
   );
 };
