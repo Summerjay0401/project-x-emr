@@ -136,11 +136,11 @@ export default function myProfile() {
                       justifyContent: "space-between",
                     }}
                   >
-                    <ListItemText> ICD10 Code </ListItemText>
-                    <ListItemText> Diagnosis </ListItemText>
-                    <ListItemText> Date of Diagnosis </ListItemText>
-                    <ListItemText> Provider Name </ListItemText>
-                    <ListItemText> Provider Phone Number </ListItemText>
+                    <ListItemText> ICD10 Code: </ListItemText>
+                    <ListItemText> Diagnosis: </ListItemText>
+                    <ListItemText> Date of Diagnosis: </ListItemText>
+                    <ListItemText> Provider Name: </ListItemText>
+                    <ListItemText> Provider Phone Number: </ListItemText>
                   </List>
                 </Typography>
               </CardContent>

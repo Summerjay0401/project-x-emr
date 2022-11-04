@@ -1,191 +1,177 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
-import PageTitle from "../../components/PageTitle";
-import { makeStyles } from "@mui/styles";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import Fab from "@mui/material/Fab";
-import SendIcon from "@mui/icons-material/Send";
 
 //Firebase Imports
-// import firebase from "firebase/app";
-// import "firebase/firestore";
-// import "firebase/auth";
-// import "firebase/analytics";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import { useCollectionData } from "react-firebase-hooks/firestore";
-
-// firebase.initializeApp({
-//   apiKey: "AIzaSyD5wk2SxXk3EECk2NakoY97DcHIto-jxEU",
-//   authDomain: "macaroni-penguins.firebaseapp.com",
-//   projectId: "macaroni-penguins",
-//   storageBucket: "macaroni-penguins.appspot.com",
-//   messagingSenderId: "713715198941",
-//   appId: "1:713715198941:web:10cb08b41851c58fada434",
-//   measurementId: "G-14R00NW6SE",
-// });
-
-// const auth = firebase.auth();
-// const firestore = firebase.firestore();
-// const analytics = firebase.analytics();
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-  },
-  chatSection: {
-    width: "100%",
-    height: "80vh",
-  },
-  headBG: {
-    backgroundColor: "#e0e0e0",
-  },
-  borderRight500: {
-    borderRight: "1px solid #e0e0e0",
-  },
-  messageArea: {
-    height: "70vh",
-    overflowY: "auto",
-  },
+const firebaseApp = firebase.initializeApp({
+  apiKey: "AIzaSyD5wk2SxXk3EECk2NakoY97DcHIto-jxEU",
+  authDomain: "macaroni-penguins.firebaseapp.com",
+  projectId: "macaroni-penguins",
+  storageBucket: "macaroni-penguins.appspot.com",
+  messagingSenderId: "713715198941",
+  appId: "1:713715198941:web:10cb08b41851c58fada434",
+  measurementId: "G-14R00NW6SE",
 });
 
+const db = firebaseApp.firestore();
+
+const auth = firebase.auth();
+
 const Messages = () => {
-  const classes = useStyles();
+  const [user] = useAuthState(auth);
+
+  function Chat() {
+    const scroll = useRef();
+    const [messages, setMessages] = useState([]);
+    useEffect(() => {
+      db.collection("messages")
+        .orderBy("createdAt")
+        .limit(50)
+        .onSnapshot((snapshot) => {
+          setMessages(snapshot.docs.map((doc) => doc.data()));
+        });
+    }, []);
+    return (
+      <div>
+        <SignOut />
+        <div className="msgs">
+          {messages.map(({ id, text, photoURL, uid }) => (
+            <div>
+              <div
+                key={id}
+                className={`msg ${
+                  uid === auth.currentUser.uid ? "sent" : "received"
+                }`}
+              >
+                <img src={photoURL} alt="" />
+                <p>{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <SendMessage scroll={scroll} />
+        <div ref={scroll}></div>
+      </div>
+    );
+  }
+
+  function SignIn() {
+    function signInWithGoogle() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider);
+    }
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100vh",
+          alignItems: "center",
+        }}
+      >
+        <Button
+          style={{
+            padding: "30px",
+            fontSize: "20px",
+            borderRadius: "0",
+            fontWeight: "600",
+          }}
+          onClick={signInWithGoogle}
+        >
+          Sign In With Google
+        </Button>
+      </div>
+    );
+  }
+
+  function SignOut() {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          position: "fixed",
+          width: "100%",
+          backgroundColor: "#FAFAFA",
+          top: 0,
+          borderBottom: "solid 1px lightgray",
+          zIndex: "10",
+        }}
+      >
+        <Button
+          style={{
+            padding: "20px",
+            fontSize: "15px",
+            borderRadius: "0",
+            fontWeight: "600",
+          }}
+          onClick={() => auth.signOut()}
+        >
+          Sign Out
+        </Button>
+      </div>
+    );
+  }
+
+  function SendMessage({ scroll }) {
+    const [msg, setMsg] = useState("");
+
+    async function sendMessage(e) {
+      e.preventDefault();
+      const { uid, photoURL } = auth.currentUser;
+
+      await db.collection("messages").add({
+        text: msg,
+        photoURL,
+        uid,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+      setMsg("");
+      scroll.current.scrollIntoView({ behavior: "smooth" });
+    }
+    return (
+      <div>
+        <form onSubmit={sendMessage}>
+          <div className="sendMsg">
+            <TextField
+              style={{
+                width: "78%",
+                fontSize: "15px",
+                fontWeight: "550",
+                marginLeft: "5px",
+                marginBottom: "-3px",
+              }}
+              placeholder="Message..."
+              type="text"
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
+            />
+            <Button
+              style={{
+                width: "18%",
+                fontSize: "15px",
+                fontWeight: "550",
+                margin: "4px 5% -13px 5%",
+                maxWidth: "200px",
+              }}
+              type="submit"
+            >
+              Send
+            </Button>
+          </div>
+        </form>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <PageTitle title="My Messages" />
-      <Grid container>
-        <Grid item xs={12}></Grid>
-      </Grid>
-      <Grid container component={Paper} className={classes.chatSection}>
-        <Grid item xs={3} className={classes.borderRight500}>
-          <List>
-            <ListItem button key="RemySharp">
-              <ListItemIcon>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="John Wick"></ListItemText>
-            </ListItem>
-          </List>
-          <Divider />
-          <Grid item xs={12} style={{ padding: "15px" }}>
-            <TextField
-              id="outlined-basic-email"
-              label="Search"
-              variant="outlined"
-              fullWidth
-            />
-          </Grid>
-          <Divider />
-          <List>
-            <ListItem button key="RemySharp">
-              <ListItemIcon>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="Remy Sharp,MD">Remy Sharp</ListItemText>
-              <ListItemText secondary="online" align="right"></ListItemText>
-            </ListItem>
-            <ListItem button key="Alice">
-              <ListItemIcon>
-                <Avatar
-                  alt="Alice"
-                  src="https://material-ui.com/static/images/avatar/3.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="Alice,RN">Alice</ListItemText>
-            </ListItem>
-            <ListItem button key="CindyBaker">
-              <ListItemIcon>
-                <Avatar
-                  alt="Cindy Baker"
-                  src="https://material-ui.com/static/images/avatar/2.jpg"
-                />
-              </ListItemIcon>
-              <ListItemText primary="Cindy Baker,NP">
-                Cindy Baker, NP
-              </ListItemText>
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid item xs={9}>
-          <List className={classes.messageArea}>
-            <ListItem key="1">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Hi Dr. Sharp, I have a question with my lab results ?"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="09:30"></ListItemText>
-                </Grid>
-              </Grid>
-            </ListItem>
-            <ListItem key="2">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="left"
-                    primary="Hi John, How are you? How can I help you with your lab results?"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="left" secondary="09:31"></ListItemText>
-                </Grid>
-              </Grid>
-            </ListItem>
-            <ListItem key="3">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Cool. i am good, My fasting blood sugar was above normal. What can I do about it? Should I schedule a telehealth appointmemnt for it?"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="10:30"></ListItemText>
-                </Grid>
-              </Grid>
-            </ListItem>
-          </List>
-          <Divider />
-          <Grid container style={{ padding: "0px" }}>
-            <Grid item xs={11} align="right">
-              <TextField
-                id="outlined-basic-email"
-                label="Type Something"
-                fullWidth
-              />
-            </Grid>
-            <Grid xs={1} align="right">
-              <Fab color="primary" aria-label="add">
-                <SendIcon fontSize="small" />
-              </Fab>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Link to="/">
-        <Button variant="outlined">Go Back</Button>
-      </Link>
+      <>{user ? <Chat /> : <SignIn />}</>
     </div>
   );
 };
