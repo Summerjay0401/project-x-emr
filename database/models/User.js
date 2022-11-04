@@ -20,7 +20,7 @@ const userSchema = new Schema({
     minlength: 5,
   },
   patientId: {
-    type: Integer,
+    type: Number,
     required: true,
     unique: true,
   },
