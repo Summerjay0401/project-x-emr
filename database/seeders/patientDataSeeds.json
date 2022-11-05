@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Dan Ross",
+        "age": 38,
+        "birthday": "31/12/1984",
+        "gender": "male",
+        "weight": 175,
+        "height": 59,
+        "address": "9114 Adams St. Philadelphia, PA 19103",
+        "email":"daneross123@gmail.com",
+        "primaryPhone": 2155241112,
+        "alternativePhone": 2671234566,
+        "currentMedications": "Aspirin, Lipito, Novolog, Metoprolol"
+
+
+    },
+]
