@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { Grid } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
 import Avatar from "@mui/material/Avatar";
 import "./Messages.css";
 
@@ -41,29 +43,42 @@ const Messages = () => {
     }, []);
     return (
       <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {messages.map(({ id, text, photoURL, uid }) => (
-            <div>
-              <div
-                key={id}
-                className={`msg ${
-                  uid === auth.currentUser.uid ? "sent" : "received"
-                }`}
-              >
-                <Avatar src={photoURL} sx={{ width: 50, height: 50 }} />
-                <p>{text}</p>
-              </div>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Card
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              margin: "5px",
+              padding: "30px",
+              justifyContent: "center",
+              maxWidth: 1050,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {messages.map(({ id, text, photoURL, uid }) => (
+                <div>
+                  <div
+                    key={id}
+                    className={`msg ${
+                      uid === auth.currentUser.uid ? "sent" : "received"
+                    }`}
+                  >
+                    <Avatar src={photoURL} sx={{ width: 50, height: 50 }} />
+                    <p>{text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <SendMessage scroll={scroll} />
-        <div ref={scroll}></div>
-        <SignOut />
+            <SendMessage scroll={scroll} />
+            <div ref={scroll}></div>
+            <SignOut />
+          </Card>
+        </Box>
       </div>
     );
   }
