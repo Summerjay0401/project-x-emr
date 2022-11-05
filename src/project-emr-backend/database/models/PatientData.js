@@ -61,11 +61,11 @@ const patientDataSchema = new Schema({
       
       trim: true,
     },
-      vitals: { 
-        type: String,
-          enum: ["male"||"female" ],
+    //   vitals: { 
+    //     type: String,
+    //       enum: ["male"||"female" ],
           
-    },
+    // },
     icd10Code: {
       type: String,
 
