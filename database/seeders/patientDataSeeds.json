@@ -10,8 +10,17 @@
         "email":"daneross123@gmail.com",
         "primaryPhone": 2155241112,
         "alternativePhone": 2671234566,
-        "currentMedications": "Aspirin, Lipito, Novolog, Metoprolol"
+        "currentMedications": "Aspirin, Lipito, Novolog, Metoprolol",
+        "notes": "10/27/2022 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aperiam voluptate neque excepturi amet voluptatum molestiae, voluptates, cumque similique dolorem nesciunt quae dicta unde ab non quis recusandae autem. Corrupti?",
+        "icd10Code":"E11.9, I10, E78. 00",
+        "daignosis": "High Sugar (Daibetes II), High Blood Pressure (Hypertension), High Cholesterol (hypercholesterolemia)",
+        "dateOfDiagnosis": "24/05/2022",
+        "providerName": "Dr. Joseph Leano",
+        "providerPhoneNumber": 2156623400,
+        "insurancePlan": "UnitedHealthcare",
+        "memberId": 123321,
+        "groupId": 789987,
+        "providerServicesNumber": 18007899877
 
-
-    },
+    }
 ]

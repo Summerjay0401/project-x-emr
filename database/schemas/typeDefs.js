@@ -25,7 +25,7 @@ type PatientData {
     notes: String
     icd10Code: String
     diagnosis: String
-    dateofDiagnosis: Date
+    dateOfDiagnosis: Date
     providerName: String
     providerPhoneNumber: Number
     insurancePlan: String
