@@ -4,6 +4,8 @@ import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
+import './LabResults.css';
+
 
 
 // import Stack from '@mui/material/Stack';
