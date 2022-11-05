@@ -2,7 +2,7 @@
     {
         "name": "Dan Ross",
         "age": 38,
-        "birthday": "31/12/1984",
+        "birthday": "31/10/1984",
         "gender": "male",
         "weight": 175,
         "height": 59,
@@ -10,7 +10,7 @@
         "email":"daneross123@gmail.com",
         "primaryPhone": 2155241112,
         "alternativePhone": 2671234566,
-        "currentMedications": "Aspirin, Lipito, Novolog, Metoprolol",
+        "currentMedications": "Aspirin, Lipitor, Novolog, Metoprolol",
         "notes": "10/27/2022 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aperiam voluptate neque excepturi amet voluptatum molestiae, voluptates, cumque similique dolorem nesciunt quae dicta unde ab non quis recusandae autem. Corrupti?",
         "icd10Code":"E11.9, I10, E78. 00",
         "daignosis": "High Sugar (Daibetes II), High Blood Pressure (Hypertension), High Cholesterol (hypercholesterolemia)",
@@ -19,6 +19,30 @@
         "providerPhoneNumber": 2156623400,
         "insurancePlan": "UnitedHealthcare",
         "memberId": 123321,
+        "groupId": 789987,
+        "providerServicesNumber": 18007899877
+
+    },
+    {
+        "name": "Laura Smith",
+        "age": 72,
+        "birthday": "18/03/1950",
+        "gender": "female",
+        "weight": 275,
+        "height": 54,
+        "address": "4558 Broad St. Philadelphia, PA 19103",
+        "email":"smithy@gmail.com",
+        "primaryPhone": 2157899855,
+        "alternativePhone": 2672588895,
+        "currentMedications": "Aspirin, Lasix, Coreg",
+        "notes": "11/03/2022 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aperiam voluptate neque excepturi amet voluptatum molestiae, voluptates, cumque similique dolorem nesciunt quae dicta unde ab non quis recusandae autem. Corrupti?",
+        "icd10Code":"I50. 9, I10,",
+        "daignosis": "Heart Failing (Conjestive Heart Failure), High Blood Pressure (Hypertension)",
+        "dateOfDiagnosis": "24/07/2020",
+        "providerName": "Dr. Summer Rosal",
+        "providerPhoneNumber": 2156623400,
+        "insurancePlan": "UnitedHealthcare",
+        "memberId": 123389,
         "groupId": 789987,
         "providerServicesNumber": 18007899877
 
