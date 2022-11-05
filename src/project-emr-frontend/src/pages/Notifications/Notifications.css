@@ -1,0 +1,29 @@
+.css-v564ce-MuiTypography-root {
+    margin: 0;
+    font-family: Source Sans Pro,sans-serif;
+    font-weight: 600;
+    font-size: 0.8571428571428571rem;
+    line-height: 1.5;
+    width: 60%;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-color: #bdb1b7;
+    color:rgb(43, 26, 60);
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+/* body {
+    background-color: aqua;
+} */
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    background-color: #6939bc1c ;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    background-color: #6939bc1c !important ;
+    border-radius: 6px;
+    
+}

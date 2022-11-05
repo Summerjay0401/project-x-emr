@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import './Notifications.css';
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
@@ -25,7 +26,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Please be sure to fast for the 12 hours leading up to your appointment (water is ok) and arrive at least 10 minutes before your appointment time to fill out the necessary paperwork.
+          {/* Please be sure to fast for the 12 hours leading up to your appointment (water is ok) and arrive at least 10 minutes before your appointment time to fill out the necessary paperwork. */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -43,7 +44,7 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Confirmation: You scheduled an appointment with Dr. Ross Ross for July 15,2023 and 1pm. Reply with “Reschedule” to change the date or time or “Cancel” to cancel your appointment.
+          {/* Confirmation: You scheduled an appointment with Dr. Ross Ross for July 15,2023 and 1pm. Reply with “Reschedule” to change the date or time or “Cancel” to cancel your appointment. */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -63,8 +64,8 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+            {/* Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
+            amet egestas eros, vitae egestas augue. Duis vel est augue. */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -80,8 +81,8 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
+            {/* Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
+            Aliquam eget maximus est, id dignissim quam. */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -99,9 +100,8 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-            varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-            laoreet.
+            {/* laoreet.Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
+            varius pulvinar diam eros in elit. Pellentesque convallis laoreet */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -119,8 +119,8 @@ export default function ControlledAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+            {/* Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
+            amet egestas eros, vitae egestas augue. Duis vel est augue. */}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -133,13 +133,12 @@ export default function ControlledAccordions() {
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            ""
+           
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+            {/*  */}
           </Typography>
         </AccordionDetails>
       </Accordion>
