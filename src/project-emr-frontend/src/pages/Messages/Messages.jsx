@@ -142,7 +142,7 @@ const Messages = () => {
             <TextField
               style={{ minWidth: "40vw" }}
               id="outlined-multiline-static"
-              label="Multiline"
+              label="Message"
               multiline
               rows={4}
               defaultValue="Default Value"
