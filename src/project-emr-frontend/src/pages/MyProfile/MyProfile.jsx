@@ -401,7 +401,7 @@ export default function myProfile() {
       </Box>
 
       <Link to="/">
-        <Button sx={{ margin: "15px" }} variant="outlined">
+        <Button sx={{ margin: "15px" }} variant="outlined"className="btn">
           Go Back
         </Button>
       </Link>

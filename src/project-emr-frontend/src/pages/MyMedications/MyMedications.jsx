@@ -166,7 +166,7 @@ const MyMedications = () => {
           </TableBody>
         </Table>
       </TableContainer> 
-      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
+      <Link to="/"><Button variant="outlined"className='btn'>Go Back</Button></Link>
     </>
   );
 }
