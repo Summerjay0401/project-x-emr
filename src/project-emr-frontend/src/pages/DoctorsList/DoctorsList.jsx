@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 
 import PageTitle from '../../components/PageTitle';
-
+import "./DoctorsList.css";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -17,7 +17,7 @@ export default function DoctorsList() {
     <div>
       <Grid container spacing={2}>
         <Grid item lg={2} xs={3} md={2.4}>
-          <Card sx={{ maxWidth: 180 }}>
+          <Card sx={{ maxWidth: 180 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -35,14 +35,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item lg={2} xs={3} md={2.4}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -60,14 +56,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -85,14 +77,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -110,14 +98,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -135,14 +119,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -160,14 +140,10 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
         <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
@@ -185,10 +161,6 @@ export default function DoctorsList() {
                 experience.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         </Grid>
       </Grid>

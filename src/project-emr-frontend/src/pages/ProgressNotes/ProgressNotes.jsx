@@ -108,7 +108,7 @@ const ProgressNotes = () => {
           components={{ Toolbar: GridToolbar }}
           />
       </Box>
-      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
+      <Link to="/"><Button variant="outlined"className="btn">Go Back</Button></Link>
     </Box>
 
   );
