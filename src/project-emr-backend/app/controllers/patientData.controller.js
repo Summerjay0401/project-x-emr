@@ -8,6 +8,7 @@ const Op = db.Sequelize.Op;
 exports.patientData = (req, res) => {
     patientData.create({
         _id: req.body._id,
+        name: req.body.name,
         age: req.body.age,
         birthday: req.body.birthday,
         gender: req.body.gender,
@@ -30,11 +31,6 @@ exports.patientData = (req, res) => {
         groupId: req.body.groupId,
         providerServiceNumber: req.body.providerServiceNumber
 })
-
-
-
-
-
 }
 
 
