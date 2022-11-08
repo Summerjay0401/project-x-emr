@@ -1,5 +1,6 @@
 const db = require("../models");
 const config = require("../config/auth.config");
+const { patientData } = require("../models");
 const User = db.user;
 const Role = db.role;
 
@@ -31,6 +32,8 @@ exports.patientData = (req, res) => {
         groupId: req.body.groupId,
         providerServiceNumber: req.body.providerServiceNumber
 })
+    
+
 }
 
 

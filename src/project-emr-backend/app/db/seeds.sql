@@ -1,4 +1,4 @@
-INSERT INTO patientData (_id, age, birthday, gender, weight, height, address,
+INSERT INTO patientData (_id, name, age, birthday, gender, weight, height, address,
 email, primaryPhone, alternativePhone, currentMedications, notes, vitals, icd10Code,
 diagnosis, dateOfDiagnosis, providerName, providerPhoneNumber, insurancePlan,
 memberId, groupId, providerServiceNumber)
