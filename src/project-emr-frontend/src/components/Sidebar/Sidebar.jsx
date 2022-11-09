@@ -205,7 +205,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Provider List"
-              to="/telehealth"
+              to="/provider-list"
               icon={<FontAwesomeIcon icon={faUserDoctor} className="icon" />}
               selected={selected}
               setSelected={setSelected}

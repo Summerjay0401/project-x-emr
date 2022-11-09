@@ -7,7 +7,7 @@ import ProgressNotes from "../pages/ProgressNotes";
 import LabResults from "../pages/LabResults";
 import MyMedications from "../pages/MyMedications";
 import Messages from "../pages/Messages";
-import Telehealth from "../pages/Telehealth";
+import ProviderList from "../pages/ProviderList";
 import Payments from "../pages/Payments";
 import ViewLabResult from "../pages/ViewLabResults";
 import Billing from "../pages/Billing/Billing";
@@ -67,8 +67,8 @@ const Router = () => {
       </Route>
 
       <Route element={<ProtectedRoute />}>
-        <Route path="/telehealth" element={<Layout />}>
-          <Route path="/telehealth" element={<Telehealth />} />
+        <Route path="/provider-list" element={<Layout />}>
+          <Route path="/provider-list" element={<ProviderList />} />
         </Route>
       </Route>
 
