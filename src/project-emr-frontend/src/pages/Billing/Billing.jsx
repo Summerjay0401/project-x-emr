@@ -26,7 +26,7 @@ const Billing = () => {
                             variant={"body1"}
                             mb={1}
                             >
-                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h4"}>University of Pennsylvania Medical Center</Typography>
+                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h6"}>University of Pennsylvania Medical Center</Typography>
                                     <List>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Diagnostic Services</ListItem>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Guarantor #27382764 (Dan Ross)</ListItem>
@@ -58,7 +58,7 @@ const Billing = () => {
                             variant={"body1"}
                             mb={1}
                             >
-                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h4"}>University of Pennsylvania Medical Center</Typography>
+                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h6"}>University of Pennsylvania Medical Center</Typography>
                                     <List>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Emergency Services</ListItem>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Guarantor #27382764 (Dan Ross)</ListItem>
@@ -90,7 +90,7 @@ const Billing = () => {
                             variant={"body1"}
                             mb={1}
                             >
-                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h4"}>University of Pennsylvania Medical Center</Typography>
+                            <Typography sx={{display:"flex", justifyContent:"center", color:"gray"}} variant={"h6"}>University of Pennsylvania Medical Center</Typography>
                                     <List>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Surgery</ListItem>
                                     <ListItem sx={{display:"flex", justifyContent:"center"}}>Guarantor #27382764 (Dan Ross)</ListItem>
