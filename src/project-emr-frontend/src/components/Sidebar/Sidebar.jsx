@@ -7,9 +7,19 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserDoctor, faUser, faCalendarDays, faClipboard, faFlask, faPills, faEnvelope, faCreditCard } from '@fortawesome/free-solid-svg-icons' // <-- import styles to be used
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserDoctor,
+  faUser,
+  faCalendarDays,
+  faClipboard,
+  faFlask,
+  faPills,
+  faEnvelope,
+  faCreditCard,
+} from "@fortawesome/free-solid-svg-icons"; // <-- import styles to be used
 import Avatar from "@mui/material/Avatar";
+import Logo from "../../assets/images/my-pulse-logo.png";
 
 import "react-pro-sidebar/dist/css/styles.css";
 
@@ -75,9 +85,7 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  E M R
-                </Typography>
+                <img src={Logo} style={{ width: "170px" }} alt="Logo" />
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
@@ -88,7 +96,16 @@ const Sidebar = () => {
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
-              <Avatar src={`https://ca.slack-edge.com/T03CXGUSFDZ-U03ENQ01Q0G-a12b2851b73d-512`} sx={{width: 60, height: 60, mb: 2, cursor: "pointer", borderRadius: "50%"}}/>
+                <Avatar
+                  src={`https://ca.slack-edge.com/T03CXGUSFDZ-U03ENQ01Q0G-a12b2851b73d-512`}
+                  sx={{
+                    width: 60,
+                    height: 60,
+                    mb: 2,
+                    cursor: "pointer",
+                    borderRadius: "50%",
+                  }}
+                />
                 {/* <img
                   alt="profile-user"
                   // width="100px"
