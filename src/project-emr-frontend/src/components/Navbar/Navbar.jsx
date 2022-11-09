@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Badge, Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -16,7 +16,7 @@ const Navbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between"  p={2}>
       {/* SEARCH BAR */}
       <Box
         display="flex"
@@ -39,7 +39,9 @@ const Navbar = () => {
           )}
         </IconButton>
         <IconButton>
-          <Notifications />
+          <Badge badgeContent={8} color="success">
+            <Notifications />
+          </Badge>
         </IconButton>
         <IconButton>
           <SettingsOutlinedIcon />
