@@ -16,10 +16,10 @@ import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 
 import ProfilePic from "../../assets/images/dan-profile-pic.png";
-import BpIcon from "../../assets/images/bp-icon.jpg";
+import BpIcon from "../../assets/images/bp-icon.png";
 import BSugarIcon from "../../assets/images/bsugar-icon.jpg";
 import PulseIcon from "../../assets/images/pulse-icon.png";
-import O2SatIcon from "../../assets/images/o2-sat-icon.jpg";
+import O2SatIcon from "../../assets/images/o2-sat-icon.png";
 import BodyTempIcon from "../../assets/images/body-temp-icon.jpg";
 
 export default function myProfile() {
@@ -162,7 +162,7 @@ export default function myProfile() {
                 {" "}
                 Vitals{" "}
               </Typography>
-              <Grid container>
+              <Grid container spacing={3} sx={{ padding: "57px" }}>
                 <Grid
                   item
                   sx={{
@@ -176,14 +176,16 @@ export default function myProfile() {
                   md={6}
                   lg={4}
                 >
-                  <Avatar
-                    alt="blood pressure"
-                    src={BpIcon}
-                    variant="square"
-                    sx={{ width: 100, height: 100 }}
-                  />{" "}
-                  Blood Pressure <br />
-                  150/80
+                  <Card>
+                    <Avatar
+                      alt="blood pressure"
+                      src={BpIcon}
+                      variant="square"
+                      sx={{ width: 150, height: 150 }}
+                    />{" "}
+                    Blood Pressure <br />
+                    150/80
+                  </Card>
                 </Grid>
                 <Grid
                   item
@@ -198,16 +200,19 @@ export default function myProfile() {
                   md={6}
                   lg={4}
                 >
-                  <Avatar
-                    alt="pulse"
-                    src={PulseIcon}
-                    variant="square"
-                    sx={{ width: 100, height: 100 }}
-                  />{" "}
-                  Pulse <br />
-                  120bpm
+                  <Card>
+                    <Avatar
+                      alt="pulse"
+                      src={PulseIcon}
+                      variant="square"
+                      sx={{ width: 150, height: 150 }}
+                    />{" "}
+                    Pulse <br />
+                    120bpm
+                  </Card>
                 </Grid>
                 <Grid
+                  item
                   sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -219,14 +224,16 @@ export default function myProfile() {
                   md={6}
                   lg={4}
                 >
-                  <Avatar
-                    alt="blood sugar"
-                    src={BSugarIcon}
-                    variant="square"
-                    sx={{ width: 100, height: 100 }}
-                  />{" "}
-                  Blood Sugar <br />
-                  130 mg/dL
+                  <Card>
+                    <Avatar
+                      alt="blood sugar"
+                      src={BSugarIcon}
+                      variant="square"
+                      sx={{ width: 150, height: 150 }}
+                    />{" "}
+                    Blood Sugar <br />
+                    130 mg/dL
+                  </Card>
                 </Grid>
                 <Grid
                   item
@@ -241,14 +248,16 @@ export default function myProfile() {
                   md={6}
                   lg={6}
                 >
-                  <Avatar
-                    alt="blood pressure"
-                    src={O2SatIcon}
-                    variant="square"
-                    sx={{ width: 100, height: 100 }}
-                  />{" "}
-                  Oxygen Saturation <br />
-                  95%
+                  <Card>
+                    <Avatar
+                      alt="blood pressure"
+                      src={O2SatIcon}
+                      variant="square"
+                      sx={{ width: 150, height: 150 }}
+                    />{" "}
+                    Oxygen Saturation <br />
+                    95%
+                  </Card>
                 </Grid>
                 <Grid
                   item
@@ -263,14 +272,16 @@ export default function myProfile() {
                   md={6}
                   lg={6}
                 >
-                  <Avatar
-                    alt="blood pressure"
-                    src={BodyTempIcon}
-                    variant="square"
-                    sx={{ width: 100, height: 100 }}
-                  />{" "}
-                  Temperature <br />
-                  97.5 F
+                  <Card>
+                    <Avatar
+                      alt="blood pressure"
+                      src={BodyTempIcon}
+                      variant="square"
+                      sx={{ width: 150, height: 150 }}
+                    />{" "}
+                    Temperature <br />
+                    97.5 F
+                  </Card>
                 </Grid>
               </Grid>
             </Card>
@@ -283,6 +294,7 @@ export default function myProfile() {
                 margin: "5px",
                 padding: "30px",
                 justifyContent: "center",
+                height: "250px",
               }}
             >
               <Typography
@@ -316,6 +328,7 @@ export default function myProfile() {
                 margin: "5px",
                 padding: "30px",
                 justifyContent: "center",
+                height: "250px",
               }}
             >
               <Typography
@@ -362,6 +375,7 @@ export default function myProfile() {
                 margin: "5px",
                 padding: "30px",
                 justifyContent: "center",
+                height: "250px",
               }}
             >
               <Typography
@@ -407,6 +421,7 @@ export default function myProfile() {
                 margin: "5px",
                 padding: "30px",
                 justifyContent: "center",
+                height: "250px",
               }}
             >
               <Typography
@@ -446,7 +461,21 @@ export default function myProfile() {
         </Grid>
       </Box>
 
-      <Link to="/"><Button sx={{marginTop: "10px", marginBottom: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
+      <Link to="/">
+        <Button
+          sx={{
+            marginTop: "10px",
+            marginBottom: "10px",
+            fontSize: "15px",
+            fontWeight: "550",
+            minWidth: "100px",
+          }}
+          variant="contained"
+          className="btn"
+        >
+          Go Back
+        </Button>
+      </Link>
     </div>
   );
 }
