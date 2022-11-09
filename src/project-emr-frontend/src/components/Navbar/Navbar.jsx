@@ -9,7 +9,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import AuthDropdown from '../AuthDropdown'
 import { Link } from "react-router-dom";
-import NotificationDropdown from '../NotificationDropdown';
+
 
 const Navbar = () => {
   const theme = useTheme();
@@ -40,7 +40,7 @@ const Navbar = () => {
           )}
         </IconButton>
         <IconButton>
-          <NotificationDropdown />
+          <Notifications />
         </IconButton>
         <IconButton>
           <SettingsOutlinedIcon />
