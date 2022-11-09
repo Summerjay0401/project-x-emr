@@ -44,7 +44,7 @@ function Payments() {
           <CheckoutForm />
         </Elements>
       )}
-      <Link to="/"><Button variant="outlined">Go Back</Button></Link>
+      <Link to="/billing"><Button variant="outlined">Go Back</Button></Link>
     </>
   );
 }

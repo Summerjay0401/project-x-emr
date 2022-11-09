@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 
 
-const CurrentPlan = () => {
+const Billing = () => {
     const {t} = useTranslation();
     return (
         <div>
@@ -119,4 +119,4 @@ const CurrentPlan = () => {
     );
 };
 
-export default CurrentPlan;
+export default Billing;

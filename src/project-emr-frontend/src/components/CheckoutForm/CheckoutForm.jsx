@@ -3,8 +3,21 @@ import { useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 
 export default function CheckoutForm() {
+  const appearance = {
+      theme: 'stripe',
+      variables: {
+        colorPrimary: '#0570de',
+        colorBackground: '#ffffff',
+        colorText: '#30313d',
+        colorDanger: '#df1b41',
+        fontFamily: 'Ideal Sans, system-ui, sans-serif',
+        spacingUnit: '2px',
+        borderRadius: '4px',
+        // See all possible variables below
+      }
+  }
   const stripe = useStripe();
-  const elements = useElements();
+  const elements = useElements({appearance});
 
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -24,7 +37,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `${window.location.origin}/completion`,
+        return_url: `${window.location.origin}/payment-complete`,
       },
     });
 
