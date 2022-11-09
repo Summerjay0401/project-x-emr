@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Avatar from "@mui/material/Avatar";
 import "./Messages.css";
+import { Link } from "react-router-dom";
 
 //Firebase Imports
 import firebase from "firebase/compat/app";
@@ -77,6 +78,7 @@ const Messages = () => {
             <SendMessage scroll={scroll} />
             <div ref={scroll}></div>
             <SignOut />
+            <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
           </Card>
         </Box>
       </div>
@@ -97,7 +99,7 @@ const Messages = () => {
           alignItems: "center",
         }}
       >
-        <Button
+        <Button variant="contained"
           style={{
             padding: "30px",
             fontSize: "20px",
@@ -116,7 +118,7 @@ const Messages = () => {
     return (
       <div>
         <Button
-          variant="outlined"
+          variant="contained"
           style={{
             fontSize: "15px",
             fontWeight: "550",
@@ -167,8 +169,12 @@ const Messages = () => {
               onChange={(e) => setMsg(e.target.value)}
             />
             <Button
-              style={{ fontSize: "15px", fontWeight: "550" }}
-              variant="outlined"
+              variant="contained"
+              style={{
+                fontSize: "15px",
+                fontWeight: "550",
+                minWidth: "100px",
+              }}
               type="submit"
             >
               Send

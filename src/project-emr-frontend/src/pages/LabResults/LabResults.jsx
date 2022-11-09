@@ -4,6 +4,7 @@ import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
 import './LabResults.css';
 
 
@@ -120,6 +121,7 @@ const Contacts = () => {
           components={{ Toolbar: GridToolbar }}
           />
       </Box>
+      <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
     </Box>
 
   );
