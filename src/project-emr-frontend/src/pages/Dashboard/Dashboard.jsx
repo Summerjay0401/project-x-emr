@@ -19,7 +19,7 @@ const Dashboard = () => {
         <Widget type="laboratory-results" />
         <Widget type="my-medications" />
         <Widget type="messages" />
-        <Widget type="telehealth" />
+        <Widget type="provider-list" />
         <Widget type="billing" />
       </div>
 

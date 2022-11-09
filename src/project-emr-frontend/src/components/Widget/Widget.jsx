@@ -98,10 +98,10 @@ const Widget = ({ type }) => {
         ),
     };
     break;  
-    case "telehealth":
+    case "provider-list":
     data = {
-      title: "CHAT WITH MY PROVIDER",
-      link: "telehealth",
+      title: "PROVIDER LIST",
+      link: "provider-list",
         icon: (
             <FontAwesomeIcon icon={faUserDoctor}
             className="icon"

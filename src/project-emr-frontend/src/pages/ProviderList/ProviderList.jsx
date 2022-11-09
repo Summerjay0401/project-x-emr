@@ -1,18 +1,20 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
-import "./DoctorsList.css";
+import Header from '../../components/Header'
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from "@mui/material";
 
-export default function DoctorsList() {
+import "./ProviderList.css";
+
+
+export default function ProviderList() {
   return (
     <div>
+      <Header title="Provider List" />
       <Grid container spacing={2}>
         <Grid item lg={2} xs={3} md={2.4}>
           <Card sx={{ maxWidth: 180 }}className="cardList">
@@ -162,9 +164,14 @@ export default function DoctorsList() {
           </Card>
         </Grid>
       </Grid>
+      <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
     </div>
   );
 }
 
-// export default DoctorsList
-// {/* // import * as React from 'react'; */}
+
+
+
+
+
+
