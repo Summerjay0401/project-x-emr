@@ -108,7 +108,7 @@ const ProgressNotes = () => {
           components={{ Toolbar: GridToolbar }}
           />
       </Box>
-      <Link to="/"><Button variant="outlined"className="btn">Go Back</Button></Link>
+      <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
     </Box>
 
   );

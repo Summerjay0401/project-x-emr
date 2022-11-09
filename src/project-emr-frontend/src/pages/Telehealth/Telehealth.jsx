@@ -11,8 +11,8 @@ export default function telehealth() {
   return (
     <div>
       <PageTitle title="CHAT WITH YOUR PROVIDER" />
-      <Link to="/"><Button variant="outlined"className='btn'>Go Back</Button ></Link >
       <DoctorsList />
+      <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
     </div>
   );
 }

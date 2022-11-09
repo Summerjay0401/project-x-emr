@@ -147,131 +147,7 @@ export default function myProfile() {
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6} lg={6}>
-            <Card
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                margin: "5px",
-                padding: "30px",
-                justifyContent: "center",
-              }}
-            >
-              <Typography
-                sx={{ textAlign: "center" }}
-                gutterBottom
-                variant="h3"
-                component="div"
-              >
-                {" "}
-                Diagnosis{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                  maxWidth: 400,
-                }}
-                variant="body2"
-                color="text.secondary"
-              >
-                <List
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "start",
-                  }}
-                >
-                  <ListItemText> ICD10 Code: </ListItemText>
-                  <ListItemText> Diagnosis: </ListItemText>
-                  <ListItemText> Date of Diagnosis: </ListItemText>
-                  <ListItemText> Provider Name: </ListItemText>
-                  <ListItemText> Provider Phone Number: </ListItemText>
-                </List>
-              </Typography>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <Card
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                margin: "5px",
-                padding: "30px",
-                justifyContent: "center",
-              }}
-            >
-              <Typography
-                sx={{ textAlign: "center" }}
-                gutterBottom
-                variant="h3"
-                component="div"
-              >
-                {" "}
-                Notes{" "}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <List>
-                  <ListItemText> 10/27/2022 </ListItemText>
-                  <ListItemText>
-                    {" "}
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Hic aperiam voluptate neque excepturi amet voluptatum
-                    molestiae, voluptates, cumque similique dolorem nesciunt
-                    quae dicta unde ab non quis recusandae autem. Corrupti?{" "}
-                  </ListItemText>
-                </List>
-              </Typography>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <Card
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                margin: "5px",
-                padding: "30px",
-                justifyContent: "center",
-              }}
-            >
-              <Typography
-                sx={{ textAlign: "center" }}
-                gutterBottom
-                variant="h3"
-                component="div"
-              >
-                {" "}
-                Current Medications{" "}
-              </Typography>
-              <Typography
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                }}
-                variant="body2"
-                color="text.secondary"
-              >
-                <List>
-                  <ListItemText>
-                    <MedicationIcon /> Aspirin{" "}
-                  </ListItemText>
-                  <ListItemText>
-                    <MedicationIcon /> Lipitor{" "}
-                  </ListItemText>
-                  <ListItemText>
-                    <MedicationIcon /> Novolog{" "}
-                  </ListItemText>
-                  <ListItemText>
-                    <MedicationIcon /> Metoprolol{" "}
-                  </ListItemText>
-                </List>
-              </Typography>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={12} lg={6}>
             <Card
               sx={{
                 display: "flex",
@@ -416,6 +292,130 @@ export default function myProfile() {
                 component="div"
               >
                 {" "}
+                Notes{" "}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                <List>
+                  <ListItemText> 10/27/2022 </ListItemText>
+                  <ListItemText>
+                    {" "}
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Hic aperiam voluptate neque excepturi amet voluptatum
+                    molestiae, voluptates, cumque similique dolorem nesciunt
+                    quae dicta unde ab non quis recusandae autem. Corrupti?{" "}
+                  </ListItemText>
+                </List>
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Card
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "5px",
+                padding: "30px",
+                justifyContent: "center",
+              }}
+            >
+              <Typography
+                sx={{ textAlign: "center" }}
+                gutterBottom
+                variant="h3"
+                component="div"
+              >
+                {" "}
+                Current Medications{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                }}
+                variant="body2"
+                color="text.secondary"
+              >
+                <List>
+                  <ListItemText>
+                    <MedicationIcon /> Aspirin{" "}
+                  </ListItemText>
+                  <ListItemText>
+                    <MedicationIcon /> Lipitor{" "}
+                  </ListItemText>
+                  <ListItemText>
+                    <MedicationIcon /> Novolog{" "}
+                  </ListItemText>
+                  <ListItemText>
+                    <MedicationIcon /> Metoprolol{" "}
+                  </ListItemText>
+                </List>
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Card
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "5px",
+                padding: "30px",
+                justifyContent: "center",
+              }}
+            >
+              <Typography
+                sx={{ textAlign: "center" }}
+                gutterBottom
+                variant="h3"
+                component="div"
+              >
+                {" "}
+                Diagnosis{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                  maxWidth: 400,
+                }}
+                variant="body2"
+                color="text.secondary"
+              >
+                <List
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "start",
+                  }}
+                >
+                  <ListItemText> ICD10 Code: </ListItemText>
+                  <ListItemText> Diagnosis: </ListItemText>
+                  <ListItemText> Date of Diagnosis: </ListItemText>
+                  <ListItemText> Provider Name: </ListItemText>
+                  <ListItemText> Provider Phone Number: </ListItemText>
+                </List>
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Card
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "5px",
+                padding: "30px",
+                justifyContent: "center",
+              }}
+            >
+              <Typography
+                sx={{ textAlign: "center" }}
+                gutterBottom
+                variant="h3"
+                component="div"
+              >
+                {" "}
                 Insurance Information{" "}
               </Typography>
               <Typography
@@ -446,11 +446,7 @@ export default function myProfile() {
         </Grid>
       </Box>
 
-      <Link to="/">
-        <Button sx={{ margin: "15px" }} variant="outlined"className="btn">
-          Go Back
-        </Button>
-      </Link>
+      <Link to="/"><Button sx={{marginTop: "10px", marginBottom: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
     </div>
   );
 }
