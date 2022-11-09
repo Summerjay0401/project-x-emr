@@ -12,6 +12,7 @@ import Payments from "../pages/Payments";
 import ViewLabResult from "../pages/ViewLabResults";
 import Billing from "../pages/Billing/Billing";
 import Notifications from "../pages/Notifications";
+import PaymentCompletion from "../pages/PaymentCompletion";
 
 import { ProtectedRoute } from "./protectedRoute";
 import Signup from "../pages/Signup/Signup";
@@ -74,6 +75,12 @@ const Router = () => {
       <Route element={<ProtectedRoute />}>
         <Route path="/payments" element={<Layout />}>
           <Route path="/payments" element={<Payments />} />
+        </Route>
+      </Route>
+
+      <Route element={<ProtectedRoute />}>
+        <Route path="/payment-complete" element={<Layout />}>
+          <Route path="/payment-complete" element={<PaymentCompletion />} />
         </Route>
       </Route>
 
