@@ -19,6 +19,8 @@ import ProfilePic from "../../assets/images/dan-profile-pic.png";
 import BpIcon from "../../assets/images/bp-icon.jpg";
 import BSugarIcon from "../../assets/images/bsugar-icon.jpg";
 import PulseIcon from "../../assets/images/pulse-icon.png";
+import O2SatIcon from "../../assets/images/o2-sat-icon.jpg";
+import BodyTempIcon from "../../assets/images/body-temp-icon.jpg";
 
 export default function myProfile() {
   return (
@@ -349,6 +351,50 @@ export default function myProfile() {
                   />{" "}
                   Blood Sugar <br />
                   130 mg/dL
+                </Grid>
+                <Grid
+                  item
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                  xs={12}
+                  md={6}
+                  lg={6}
+                >
+                  <Avatar
+                    alt="blood pressure"
+                    src={O2SatIcon}
+                    variant="square"
+                    sx={{ width: 100, height: 100 }}
+                  />{" "}
+                  Oxygen Saturation <br />
+                  95%
+                </Grid>
+                <Grid
+                  item
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                  xs={12}
+                  md={6}
+                  lg={6}
+                >
+                  <Avatar
+                    alt="blood pressure"
+                    src={BodyTempIcon}
+                    variant="square"
+                    sx={{ width: 100, height: 100 }}
+                  />{" "}
+                  Temperature <br />
+                  97.5 F
                 </Grid>
               </Grid>
             </Card>
