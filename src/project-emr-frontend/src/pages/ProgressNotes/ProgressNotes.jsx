@@ -7,7 +7,7 @@ import { useTheme } from "@mui/material";
 import Button from '@mui/material/Button';
 import {useNavigate} from 'react-router-dom';
 import { Link } from "react-router-dom";
-import './ProgressNotes.css'
+import './ProgressNotes.css';
 
 const ProgressNotes = () => {
   const theme = useTheme();

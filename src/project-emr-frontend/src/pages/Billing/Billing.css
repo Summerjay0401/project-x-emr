@@ -11,3 +11,15 @@
 	border-radius: 10px;
 	background: #4E68C7;
 }
+
+.btn {
+    background-color: #4CAF50 !important;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+  }
+  

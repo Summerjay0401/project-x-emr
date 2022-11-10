@@ -2,6 +2,13 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 
+import img6 from "../../assets/images/img6.jpeg"
+import img2 from "../../assets/images/img2.jpeg"
+import img3 from "../../assets/images/img3.jpeg"
+import img4 from "../../assets/images/img4.jpeg"
+import img7 from "../../assets/images/img7.jpeg"
+import img1 from "../../assets/images/img1.jpeg"
+
 import PageTitle from '../../components/PageTitle';
 import "./DoctorsList.css";
 import Card from '@mui/material/Card';
@@ -23,7 +30,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img6}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -44,7 +51,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img6}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -65,7 +72,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img1}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -86,7 +93,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img7}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -107,7 +114,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img3}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -128,7 +135,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img2}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -149,7 +156,7 @@ export default function DoctorsList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img4}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
