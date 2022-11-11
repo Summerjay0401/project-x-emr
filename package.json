@@ -2,10 +2,13 @@
   "name": "project-x-emr",
   "version": "1.0.0",
   "description": "Electronic medical records (EMRs) and electronic health records (EHRs) are often used interchangeably. An EMR. allows the electronic entry, storage, and maintenance of digital medical data. EHR contains the patient's records.",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "concurrently \"cd project-emr-backend && npm run watch\" \"cd project-emr-frontend && npm start\""
+    "develop": "concurrently \"cd project-emr-backend && npm run watch\" \"cd project-emr-frontend && npm start\"",
+    "install": "cd project-emr-backend && npm i && cd ../project-emr-frontend && npm i",
+    "seed": "cd project-emr-backend/db && npm run seed"
   },
   "repository": {
     "type": "git",
@@ -16,8 +19,9 @@
   "bugs": {
     "url": "https://github.com/Summerjay0401/project-x-emr/issues"
   },
-  "homepage": "https://github.com/Summerjay0401/project-x-emr#readme",
+  "homepage": "https://github.com/Summerjay0401/project-x-emr",
   "dependencies": {
     "concurrently": "^7.5.0"
-  }
+  },
+  "homepage": "https://Summerjay0401.github.io/project-x-emr",
 }
