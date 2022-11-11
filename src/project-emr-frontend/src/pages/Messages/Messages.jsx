@@ -69,7 +69,7 @@ const Messages = () => {
                       uid === auth.currentUser.uid ? "sent" : "received"
                     }`}
                   >
-                    <Avatar src={photoURL} />
+                    <Avatar src={ photoURL } />
                     <p>{text}</p>
                   </div>
                 </div>

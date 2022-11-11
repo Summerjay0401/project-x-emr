@@ -24,7 +24,7 @@ export default function ProviderList() {
     <div>
       <Header title="Provider List" />
       <Grid container spacing={2}>
-        <Grid item lg={2} xs={3} md={2.4}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 180 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -45,7 +45,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item lg={2} xs={3} md={2.4}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -66,7 +66,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -87,7 +87,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -108,7 +108,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -129,7 +129,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
@@ -150,7 +150,7 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
