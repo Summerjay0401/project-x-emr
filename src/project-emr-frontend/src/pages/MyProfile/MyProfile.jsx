@@ -27,11 +27,10 @@ import { useAuth } from "../../context/auth.context";
 
 export default function MyProfile() {
 
-  let [state, dispatch] = useAuth();
-  console.log(process.env.REACT_APP_API_URL);
+  let [state] = useAuth();
 
-  useEffect(() => {
-    const vitals = VitalsService.getAllByUser(1);
+  useEffect(async () => {
+    const vitals = await VitalsService.getAllByUser(state.user.id);
     console.log(vitals);
   }, [])
 

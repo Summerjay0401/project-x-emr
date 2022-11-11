@@ -7,8 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from "@mui/material";
-import VitalsService from "../../services/vitalService";
-import { useAuth } from "../../context/auth.context";
 
 import img6 from "../../assets/images/img6.jpeg"
 import img2 from "../../assets/images/img2.jpeg"
