@@ -19,9 +19,11 @@
   "bugs": {
     "url": "https://github.com/Summerjay0401/project-x-emr/issues"
   },
-  "homepage": "https://github.com/Summerjay0401/project-x-emr",
-  "dependencies": {
+  "homepage": "https://Summerjay0401.github.io/project-x-emr",
+  "devdependencies": {
     "concurrently": "^7.5.0"
   },
-  "homepage": "https://Summerjay0401.github.io/project-x-emr",
+  "dependencies": {
+    "react": "^17.0.2"
+  
 }
