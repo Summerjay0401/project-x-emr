@@ -11,7 +11,13 @@ module.exports = (sequelize, Sequelize) => {
     },
     pulse: {
       type: Sequelize.STRING
-    }
+    },
+    oxygenSaturation: {
+      type: Sequelize.STRING
+    },
+    temperature: {
+      type: Sequelize.STRING
+    },
   });
   
   return vitals;

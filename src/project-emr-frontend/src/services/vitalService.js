@@ -9,7 +9,7 @@ const getAllByUser = (userId) => {
 };
 
 const getById = (userId, id) => {
-    return axios.get(`${API_URL}/${userId}/${id}`, {
+    return axios.get(`${API_URL}/${userId}`, {
         headers: authHeader()
     });
 };

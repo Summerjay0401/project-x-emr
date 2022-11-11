@@ -13,12 +13,12 @@ module.exports = function(app) {
     app.get(
         "/api/vitals/:userId",
         [authJwt.verifyToken],
-        controller.getAllByUser);
+        controller.getByUserId);
     
-    app.get(
-        "/api/vitals/:userId/:id",
-        [authJwt.verifyToken],
-        controller.getById);
+    // app.get(
+    //     "/api/vitals/?userId=:userId",
+    //     [authJwt.verifyToken],
+    //     controller.getByUserId);
 
     app.post(
         "/api/vitals",

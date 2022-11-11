@@ -21,14 +21,21 @@ exports.getAllByUser = async (req, res) => {
     }
 }
 
-exports.getById = (req, res) => {
-    const vital = db.vitals.findOne({
-        where: {
-            id: req.params.id
-        }
-    });
+exports.getByUserId = async (req, res) => {
+    try {
 
-    return vital.get({ plain: true });
+        const vital = await db.vitals.findOne({
+            where: {
+                userId: req.params.userId
+            }
+        });
+
+        return res.status(200).json(vital.get({ plain: true }));
+        
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
 }
 
 exports.create = async (req, res) => {
