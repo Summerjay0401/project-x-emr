@@ -10,8 +10,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Alert from '@mui/material/Alert';
 
 import { useNavigate } from "react-router-dom";
 import AuthService from "../../services/authService";
@@ -50,6 +50,9 @@ export default function SignInSide() {
     const data = new FormData(event.currentTarget);
     const username = data.get('email');
     const password = data.get('password');
+
+    if (!username) setMessage("Username is required");
+    if (!password) setMessage("password is required");
 
     AuthService.login(username, password).then(
       (user) => {
@@ -106,6 +109,8 @@ export default function SignInSide() {
               Sign in
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              {message && <Alert severity="error">{message}</Alert>}
+            
               <TextField
                 margin="normal"
                 required
