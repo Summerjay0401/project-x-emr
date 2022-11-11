@@ -18,7 +18,7 @@
 
 ## Description
 
-This is our final group project for the UPENN Bootcamp. As a group, we were tasked to create an Interactive MERN Stack Single-Page Application. As a group, we have created an Electron Health Records application called MyPulse. An EHR focuses on the total health of the patient, going beyond standard clinical data collected in the provider’s office, and inclusive of a broader view on a patient’s care. EHRs are designed to reach out beyond the health organization that originally collects and compiles the information.
+This is our final group project for the UPENN Bootcamp. As a group, we were tasked to create an Interactive MERN Stack Single-Page Application. As a group, we have created an Electronic Health Records (EHR) application called MyPulse. An EHR focuses on the total health of the patient, going beyond standard clinical data collected in the provider’s office, and inclusive of a broader view on a patient’s care. EHRs are designed to reach out beyond the health organization that originally collects and compiles the information.
 
 ---
 
