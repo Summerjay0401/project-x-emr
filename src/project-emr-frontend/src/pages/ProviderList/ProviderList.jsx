@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Header from '../../components/Header'
@@ -17,7 +17,6 @@ import img1 from "../../assets/images/img1.jpeg"
 
 
 import "./ProviderList.css";
-
 
 export default function ProviderList() {
   return (

@@ -1,0 +1,42 @@
+[
+    {
+        "userId": 1,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m",
+        "oxygenSaturation": "75%",
+        "temperature": "90"
+    },
+    {
+        "userId": 2,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m",
+        "oxygenSaturation": "60%",
+        "temperature": "97.5"
+    },
+    {
+        "userId": 3,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m",
+        "oxygenSaturation": "60%",
+        "temperature": "100"
+    },
+    {
+        "userId": 4,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m",
+        "oxygenSaturation": "90%",
+        "temperature": "98.9"
+    },
+    {
+        "userId": 5,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m",
+        "oxygenSaturation": "80%",
+        "temperature": "90"
+    }
+]

@@ -1,23 +1,6 @@
-const config = require("../config/db.config.js");
-
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(
-  config.DB,
-  config.USER,
-  config.PASSWORD,
-  {
-    host: config.HOST,
-    dialect: config.dialect,
-    operatorsAliases: false,
 
-    pool: {
-      max: config.pool.max,
-      min: config.pool.min,
-      acquire: config.pool.acquire,
-      idle: config.pool.idle
-    }
-  }
-);
+const sequelize = require("../config/connection");
 
 const db = {};
 
@@ -26,7 +9,8 @@ db.sequelize = sequelize;
 
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
-db.patientData = require("../models/patientData.model")(sequelize, Sequelize);
+db.patient = require("../models/patient.model.js")(sequelize, Sequelize);
+db.vitals = require("../models/vitals.model.js")(sequelize, Sequelize);
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",
@@ -38,11 +22,7 @@ db.user.belongsToMany(db.role, {
   foreignKey: "userId",
   otherKey: "roleId"
 });
-db.patientData.belongsTo(db.user, {
-  through: "user_roles",
-  foreignKey: "roleId",
-  otherKey: "userId"
-})
+
 db.ROLES = ["user", "admin", "moderator"];
 
 module.exports = db;

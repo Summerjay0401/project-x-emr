@@ -1,16 +1,25 @@
 module.exports = (sequelize, Sequelize) => {
-    const vitals = sequelize.define("vitals", {
-      bloodPressure: {
-        type: Sequelize.INTEGER
-      },
-      bloodSugar: {
-        type: Sequelize.INTEGER
-      },
-      pulse: {
-        type: Sequelize.INTEGER
-      }
-    });
+  const vitals = sequelize.define("vitals", {
+    userId: {
+      type: Sequelize.INTEGER
+    },
+    bloodPressure: {
+      type: Sequelize.STRING
+    },
+    bloodSugar: {
+      type: Sequelize.STRING
+    },
+    pulse: {
+      type: Sequelize.STRING
+    },
+    oxygenSaturation: {
+      type: Sequelize.STRING
+    },
+    temperature: {
+      type: Sequelize.STRING
+    },
+  });
   
-    return vitals;
-  };
+  return vitals;
+};
   

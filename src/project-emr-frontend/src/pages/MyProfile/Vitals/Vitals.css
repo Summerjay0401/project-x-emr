@@ -1,0 +1,41 @@
+.vitals-container {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+}
+
+.vitals-container .vital-card {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 1px 1px 9px 1px rgba(107, 107, 107, 0.47);
+    border-radius: 10px;
+    height: 210px;
+    flex: 1 0 10%; 
+}
+.vitals-container .vital-card:hover{
+    /* background-color: #777; */
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.vitals-container .vital-card .left, .vital-card .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vitals-container .vital-card .left .title, .vital-card .right .title {
+    font-weight: bold;
+    font-size: 15px;
+    align-self: center;
+}
+
+.vitals-container .vital-card .left .icon, .vital-card .right .icon {
+    font-size: 120px;
+    padding: 30px;
+    border-radius: 5px;
+    align-self: center;
+}
