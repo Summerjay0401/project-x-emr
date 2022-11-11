@@ -6,7 +6,7 @@ const Role = db.role;
 
 const Op = db.Sequelize.Op;
 
-exports.patientData = (req, res) => {
+exports.patient = (req, res) => {
     patientData.create({
         _id: req.body._id,
         name: req.body.name,

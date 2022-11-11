@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Header from '../../components/Header'
@@ -7,9 +7,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from "@mui/material";
+import VitalsService from "../../services/vitalService";
+import { useAuth } from "../../context/auth.context";
 
 import "./ProviderList.css";
-
 
 export default function ProviderList() {
   return (

@@ -57,7 +57,8 @@ function createData(
 const useStyles = makeStyles({
   root: {
     fontSize: '15px !important',
-    textAlign: 'center !important'
+    textAlign: 'center !important',
+    color: '#797EF6 !important'
   },
 });
 

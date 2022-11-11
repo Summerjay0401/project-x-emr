@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
-    const patientData = sequelize.define("patientData", {
-      username: {
-        type: Sequelize.STRING
+  const patientData = sequelize.define("patients", {
+      userId: {
+        type: Sequelize.INTEGER
       },
       name: {
         type: Sequelize.STRING
@@ -10,28 +10,28 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER
       },
       birthday: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       gender: {
         type: Sequelize.STRING
       },
       weight: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       height: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
       },
       primaryPhone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       alternativePhone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       currentMedications: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       vitals: {
         type: Sequelize.STRING
@@ -43,30 +43,28 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING
       },
       dateofDiagnosis: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       providerName: {
         type: Sequelize.STRING
       },
       providerPhoneNumber: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       insruancePlan: {
         type: Sequelize.STRING
       },
       memberId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       groupId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       providerServicesNumber: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       }
     });
   
-  
-  
     return patientData;
-  };
+};
   

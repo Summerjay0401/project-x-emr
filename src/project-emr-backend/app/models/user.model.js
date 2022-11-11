@@ -1,3 +1,5 @@
+var bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, Sequelize) => {
   const User = sequelize.define("users", {
     username: {
@@ -8,6 +10,17 @@ module.exports = (sequelize, Sequelize) => {
     },
     password: {
       type: Sequelize.STRING
+    },
+  },
+  {
+    hooks: {
+      beforeCreate(newUserData) {
+        newUserData.password = bcrypt.hashSync(
+          newUserData.password,
+          8
+        );
+        return newUserData;
+      },
     }
   });
 

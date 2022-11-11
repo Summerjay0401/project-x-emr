@@ -1,0 +1,44 @@
+[
+    {
+        "userId": 1,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 2,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 3,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 4,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 5,
+        "bloodPressure": "100/80",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 1,
+        "bloodPressure": "120/100",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    },
+    {
+        "userId": 2,
+        "bloodPressure": "120/100",
+        "bloodSugar": "90",
+        "pulse": "60/m"
+    }
+]

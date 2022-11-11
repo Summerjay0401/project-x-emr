@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -22,7 +22,19 @@ import PulseIcon from "../../assets/images/pulse-icon.png";
 import O2SatIcon from "../../assets/images/o2-sat-icon.png";
 import BodyTempIcon from "../../assets/images/body-temp-icon.jpg";
 
-export default function myProfile() {
+import VitalsService from "../../services/vitalService";
+import { useAuth } from "../../context/auth.context";
+
+export default function MyProfile() {
+
+  let [state, dispatch] = useAuth();
+  console.log(process.env.REACT_APP_API_URL);
+
+  useEffect(() => {
+    const vitals = VitalsService.getAllByUser(1);
+    console.log(vitals);
+  }, [])
+
   return (
     <div>
       <PageTitle title="My Profile" />
@@ -79,33 +91,31 @@ export default function myProfile() {
                   md={12}
                   lg={6}
                 >
-                  <Typography
-                    sx={{
+                  <Box sx={{
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
                       maxWidth: 300,
                     }}
                     variant="body2"
-                    color="text.secondary"
-                  >
+                    color="text.secondary">
                     <List>
-                      <ListItemText> Date of Birth </ListItemText>
-                      <ListItemText> 12/31/1999 </ListItemText>
-                      <br />
-                      <ListItemText> Gender </ListItemText>
-                      <ListItemText> Male </ListItemText>
-                      <br />
-                      <ListItemText> Weight </ListItemText>
-                      <ListItemText> 195lbs </ListItemText>
-                      <br />
-                      <ListItemText> Age </ListItemText>
-                      <ListItemText> 45 </ListItemText>
-                      <br />
-                      <ListItemText> Height </ListItemText>
-                      <ListItemText> 6'7 </ListItemText>
-                    </List>
-                  </Typography>
+                        <ListItemText> Date of Birth </ListItemText>
+                        <ListItemText> 12/31/1999 </ListItemText>
+                        <br />
+                        <ListItemText> Gender </ListItemText>
+                        <ListItemText> Male </ListItemText>
+                        <br />
+                        <ListItemText> Weight </ListItemText>
+                        <ListItemText> 195lbs </ListItemText>
+                        <br />
+                        <ListItemText> Age </ListItemText>
+                        <ListItemText> 45 </ListItemText>
+                        <br />
+                        <ListItemText> Height </ListItemText>
+                        <ListItemText> 6'7 </ListItemText>
+                      </List>
+                    </Box>
                 </Grid>
 
                 <Grid
@@ -118,16 +128,14 @@ export default function myProfile() {
                   md={12}
                   lg={6}
                 >
-                  <Typography
-                    sx={{
+                  <Box sx={{
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
                       maxWidth: 300,
                     }}
                     variant="body2"
-                    color="text.secondary"
-                  >
+                    color="text.secondary">
                     <List>
                       <ListItemText> Address </ListItemText>
                       <ListItemText> 123 Main St </ListItemText>
@@ -142,7 +150,7 @@ export default function myProfile() {
                       <ListItemText> E-mail </ListItemText>
                       <ListItemText> testing@email.com </ListItemText>
                     </List>
-                  </Typography>
+                  </Box>
                 </Grid>
               </Grid>
             </Card>
@@ -306,7 +314,7 @@ export default function myProfile() {
                 {" "}
                 Notes{" "}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Box variant="body2" color="text.secondary">
                 <List>
                   <ListItemText> 10/27/2022 </ListItemText>
                   <ListItemText>
@@ -317,7 +325,7 @@ export default function myProfile() {
                     quae dicta unde ab non quis recusandae autem. Corrupti?{" "}
                   </ListItemText>
                 </List>
-              </Typography>
+              </Box>
             </Card>
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
@@ -340,7 +348,7 @@ export default function myProfile() {
                 {" "}
                 Current Medications{" "}
               </Typography>
-              <Typography
+              <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -364,7 +372,7 @@ export default function myProfile() {
                     <MedicationIcon /> Metoprolol{" "}
                   </ListItemText>
                 </List>
-              </Typography>
+              </Box>
             </Card>
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
@@ -387,7 +395,7 @@ export default function myProfile() {
                 {" "}
                 Diagnosis{" "}
               </Typography>
-              <Typography
+              <Box
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
@@ -410,7 +418,7 @@ export default function myProfile() {
                   <ListItemText> Provider Name: </ListItemText>
                   <ListItemText> Provider Phone Number: </ListItemText>
                 </List>
-              </Typography>
+              </Box>
             </Card>
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
@@ -433,7 +441,7 @@ export default function myProfile() {
                 {" "}
                 Insurance Information{" "}
               </Typography>
-              <Typography
+              <Box
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
@@ -455,7 +463,7 @@ export default function myProfile() {
                   <ListItemText> Group ID </ListItemText>
                   <ListItemText> Provider Services # </ListItemText>
                 </List>
-              </Typography>
+              </Box>
             </Card>
           </Grid>
         </Grid>
