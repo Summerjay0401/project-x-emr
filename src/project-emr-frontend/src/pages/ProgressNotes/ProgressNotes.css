@@ -1,6 +1,6 @@
 .css-1i20c2f .MuiDataGrid-toolbarContainer .MuiButton-text {
     color: #141414!important;
-    background-color:rgb(159, 210, 178);
+    background-color:#9fd2b2;
     
     }
 
@@ -15,5 +15,8 @@
         font-size: 10px;
       }
       
+    
 
-
+      .css-188bdav-MuiButtonBase-root-MuiButton-root {
+        color:#141414 !important;
+      }
