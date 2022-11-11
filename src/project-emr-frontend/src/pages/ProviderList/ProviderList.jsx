@@ -8,6 +8,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from "@mui/material";
 
+import img6 from "../../assets/images/img6.jpeg"
+import img2 from "../../assets/images/img2.jpeg"
+import img3 from "../../assets/images/img3.jpeg"
+import img4 from "../../assets/images/img4.jpeg"
+import img7 from "../../assets/images/img7.jpeg"
+import img1 from "../../assets/images/img1.jpeg"
+
+
 import "./ProviderList.css";
 
 
@@ -23,7 +31,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img6}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -32,7 +40,7 @@ export default function ProviderList() {
               <Typography variant="body2" color="text.secondary">
                 BDS MDS - Periodontology
                 and Oral implantology. 20 Years
-                experience.
+                experience.P
               </Typography>
             </CardContent>
           </Card>
@@ -44,7 +52,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img6}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -65,7 +73,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img1}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -86,7 +94,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img7}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -107,7 +115,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img3}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -128,7 +136,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img2}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -149,7 +157,7 @@ export default function ProviderList() {
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img4}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
