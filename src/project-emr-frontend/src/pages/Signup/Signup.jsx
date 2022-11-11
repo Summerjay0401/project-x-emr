@@ -50,7 +50,7 @@ export default function SignInSide() {
     setLoading(true);
 
     const data = new FormData(event.currentTarget);
-    const username = data.get('email');
+    const username = data.get('username');
     const email = data.get('email');
     const password = data.get('password');
 
