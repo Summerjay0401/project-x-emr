@@ -69,7 +69,7 @@ const Messages = () => {
                       uid === auth.currentUser.uid ? "sent" : "received"
                     }`}
                   >
-                    <Avatar src={photoURL} sx={{ width: 50, height: 50 }} />
+                    <Avatar src={ photoURL } />
                     <p>{text}</p>
                   </div>
                 </div>
@@ -78,7 +78,20 @@ const Messages = () => {
             <SendMessage scroll={scroll} />
             <div ref={scroll}></div>
             <SignOut />
-            <Link to="/"><Button sx={{marginTop: "10px", fontSize: "15px", fontWeight: "550", minWidth: "100px",}} variant="contained" className='btn'>Go Back</Button></Link>
+            <Link to="/">
+              <Button
+                sx={{
+                  marginTop: "10px",
+                  fontSize: "15px",
+                  fontWeight: "550",
+                  minWidth: "100px",
+                }}
+                variant="contained"
+                className="btn"
+              >
+                Go Back
+              </Button>
+            </Link>
           </Card>
         </Box>
       </div>
@@ -99,7 +112,8 @@ const Messages = () => {
           alignItems: "center",
         }}
       >
-        <Button variant="contained"
+        <Button
+          variant="contained"
           style={{
             padding: "30px",
             fontSize: "20px",

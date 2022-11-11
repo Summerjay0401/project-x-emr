@@ -10,6 +10,14 @@ import { CardActionArea, Grid } from "@mui/material";
 import VitalsService from "../../services/vitalService";
 import { useAuth } from "../../context/auth.context";
 
+import img6 from "../../assets/images/img6.jpeg"
+import img2 from "../../assets/images/img2.jpeg"
+import img3 from "../../assets/images/img3.jpeg"
+import img4 from "../../assets/images/img4.jpeg"
+import img7 from "../../assets/images/img7.jpeg"
+import img1 from "../../assets/images/img1.jpeg"
+
+
 import "./ProviderList.css";
 
 export default function ProviderList() {
@@ -17,14 +25,35 @@ export default function ProviderList() {
     <div>
       <Header title="Provider List" />
       <Grid container spacing={2}>
-        <Grid item lg={2} xs={3} md={2.4}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 180 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img6}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Dr. Dan Ross
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                BDS MDS - Periodontology
+                and Oral implantology. 20 Years
+                experience.P
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={4} lg={2}>
+          <Card sx={{ maxWidth: 190 }}className="cardList">
+            <CardActionArea></CardActionArea>
+            <CardMedia
+              component="img"
+              alt="green iguana"
+              height="140"
+              image={img6}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -38,35 +67,14 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item lg={2} xs={3} md={2.4}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Dr. Dan Ross
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                BDS MDS - Periodontology
-                and Oral implantology. 20 Years
-                experience.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
-          <Card sx={{ maxWidth: 190 }}className="cardList">
-            <CardActionArea></CardActionArea>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image="https://source.unsplash.com/random"
+              image={img1}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -80,14 +88,14 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img7}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -101,14 +109,14 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img3}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -122,14 +130,14 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img2}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -143,14 +151,14 @@ export default function ProviderList() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={3} md={2.4} lg={2}>
+        <Grid item xs={12} md={4} lg={2}>
           <Card sx={{ maxWidth: 190 }}className="cardList">
             <CardActionArea></CardActionArea>
             <CardMedia
               component="img"
               alt="green iguana"
               height="140"
-              image="https://source.unsplash.com/random"
+              image={img4}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

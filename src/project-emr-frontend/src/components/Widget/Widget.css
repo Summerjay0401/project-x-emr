@@ -10,13 +10,13 @@
     flex: 1;
     padding: 10px;
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    box-shadow: 1px 1px 9px 1px rgba(107, 107, 107, 0.47);
     border-radius: 10px;
     height: 250px;
     flex: 1 0 21%; 
 }
 .widget:hover{
-    background-color: #ccc;
+    background-color: #777;
     cursor: pointer;
     font-weight: 400;
 }
@@ -29,7 +29,6 @@
 .widget .left .title, .widget .right .title {
     font-weight: bold;
     font-size: 15px;
-    color: black;
     align-self: center;
 }
 
