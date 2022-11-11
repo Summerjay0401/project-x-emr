@@ -51,8 +51,8 @@ export default function SignInSide() {
     const username = data.get('email');
     const password = data.get('password');
 
-    if (!username) setMessage("Username is required");
-    if (!password) setMessage("password is required");
+    if (!username) return setMessage("Username is required");
+    if (!password) return setMessage("password is required");
 
     AuthService.login(username, password).then(
       (user) => {

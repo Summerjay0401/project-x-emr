@@ -14,13 +14,13 @@ module.exports = (sequelize, Sequelize) => {
   },
   {
     hooks: {
-      beforeCreate(newUserData) {
-        newUserData.password = bcrypt.hashSync(
-          newUserData.password,
-          8
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(
+            newUserData.password,
+            8
         );
         return newUserData;
-      },
+      }
     }
   });
 

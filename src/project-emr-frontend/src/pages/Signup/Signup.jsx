@@ -18,9 +18,6 @@ import { useNavigate } from "react-router-dom";
 import AuthService from "../../services/authService";
 import { useAuth } from "../../context/auth.context";
 
-
-import Paper from '@mui/material/Paper';
-
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -51,13 +48,14 @@ export default function SignInSide() {
     setLoading(true);
 
     const data = new FormData(event.currentTarget);
-    const username = data.get('username');
+
     const email = data.get('email');
+    const username = data.get('username');
     const password = data.get('password');
 
-    if (!username) setMessage("Username is required");
-    if (!email) setMessage("Email is required");
-    if (!password) setMessage("password is required");
+    if (!email) return setMessage("Email is required");
+    if (!username) return setMessage("Username is required");
+    if (!password) return setMessage("password is required");
 
     AuthService.register(username, email, password).then(
       (user) => {
