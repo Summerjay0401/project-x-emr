@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <AuthProvider userData={user}>
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>

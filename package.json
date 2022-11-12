@@ -5,7 +5,7 @@
     "node": "14.16.0"
   },
   "description": "![Application Logo](./src/project-emr-frontend/src/assets/images/my-pulse-logo.png)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "cd src/project-emr-backend && npm start",
     "dev:server": "cd src/project-emr-backend && npm run start",
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/Summerjay0401/project-x-emr/issues"
   },
-  "homepage": "https://github.com/Summerjay0401/project-x-emr#readme",
+  "homepage": ".",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
@@ -42,6 +42,7 @@
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "serve": "^14.1.1"
   }
 }
