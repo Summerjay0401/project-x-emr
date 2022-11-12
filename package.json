@@ -1,14 +1,19 @@
 {
   "name": "project-x-emr",
   "version": "1.0.0",
-  "description": "Electronic medical records (EMRs) and electronic health records (EHRs) are often used interchangeably. An EMR. allows the electronic entry, storage, and maintenance of digital medical data. EHR contains the patient's records.",
-  "main": "server/server.js",
+  "engines": {
+    "node": "14.16.0"
+  },
+  "description": "![Application Logo](./src/project-emr-frontend/src/assets/images/my-pulse-logo.png)",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "concurrently \"cd project-emr-backend && npm run watch\" \"cd project-emr-frontend && npm start\"",
-    "install": "cd project-emr-backend && npm i && cd ../project-emr-frontend && npm i",
-    "seed": "cd project-emr-backend/db && npm run seed"
+    "start": "cd src/project-emr-backend && npm run start",
+    "dev:server": "cd src/project-emr-backend && npm run start",
+    "dev:client": "cd src/project-emr-frontend && npm run start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" --no-copy-ignored src/project-emr-backend",
+    "generate": "cd src/project-emr-backend && npm run seed",
+    "postinstall": "cd src/project-emr-frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,11 +24,11 @@
   "bugs": {
     "url": "https://github.com/Summerjay0401/project-x-emr/issues"
   },
-  "homepage": "https://Summerjay0401.github.io/project-x-emr",
-  "devdependencies": {
-    "concurrently": "^7.5.0"
-  },
+  "homepage": "https://github.com/Summerjay0401/project-x-emr#readme",
   "dependencies": {
-    "react": "^17.0.2"
-  
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0"
+  }
 }
