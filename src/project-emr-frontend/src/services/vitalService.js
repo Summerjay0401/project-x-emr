@@ -14,13 +14,8 @@ const getById = (userId, id) => {
     });
 };
 
-const create = (userId, bloodPressure, bloodSugar, pulse) => {
-    return axios.post(`${API_URL}`, {
-        userId,
-        bloodPressure,
-        bloodSugar,
-        pulse
-    }, {
+const create = (obj) => {
+    return axios.post(`${API_URL}`, obj, {
         headers: authHeader()
     });
 };

@@ -29,8 +29,8 @@ exports.getByUserId = async (req, res) => {
                 userId: req.params.userId
             }
         });
-
-        return res.status(200).json(vital.get({ plain: true }));
+        
+        return res.status(200).json(vital?.get({ plain: true }));
         
     } catch (err) {
         console.log(err);
@@ -38,17 +38,45 @@ exports.getByUserId = async (req, res) => {
     }
 }
 
+const createVital = async (vital) => {
+    return await db.vitals.create({
+        userId: vital.userId,
+        bloodPressure: vital.bloodPressure,
+        bloodSugar: vital.bloodSugar,
+        pulse: vital.pulse,
+        oxygenSaturation: vital.oxygenSaturation,
+        temperature: vital.temperature
+    });
+}
+
+const updateVital = async (vital) => {
+    return await db.vitals.update({
+        bloodPressure: vital.bloodPressure,
+        bloodSugar: vital.bloodSugar,
+        pulse: vital.pulse,
+        oxygenSaturation: vital.oxygenSaturation,
+        temperature: vital.temperature
+    }, {
+        where: {
+            userId: vital.userId
+        }
+    });;
+}
+
 exports.create = async (req, res) => {
     try {
-
-        const vital = await db.vitals.create({
-            userId: req.body.userId,
-            bloodPressure: req.body.bloodPressure,
-            bloodSugar: req.body.bloodSugar,
-            pulse: req.body.pulse
+        
+        const vital = await db.vitals.findOne({
+            where: {
+                userId: req.body.userId
+            }
         });
 
-        return res.status(200).json(vital);
+        let ret = {};
+        if (!vital) ret = createVital(req.body);
+        else ret = updateVital(req.body);
+
+        return res.status(200).json(ret);
 
     } catch (err) {
         console.log(err);
