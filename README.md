@@ -52,7 +52,7 @@ This Node Express application powers all functionality on the tenant and admin s
 
 ## Deployment
 
-- [Heroku](#)
+- https://ehr-mypulse.herokuapp.com/login
 
 ---
 
