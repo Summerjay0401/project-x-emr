@@ -15,7 +15,7 @@ function Payments() {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    axios.get(`payment/config`, {
+    axios.get(`api/payment/config`, {
       headers: authHeader()
     }).then(async (response) => {
       const { publishableKey } = await response.data;
@@ -25,7 +25,7 @@ function Payments() {
 
   useEffect(() => {
     axios
-    .post(`payment/create-payment-intent`,
+    .post(`api/payment/create-payment-intent`,
       JSON.stringify({}), {
         headers: authHeader()
       })

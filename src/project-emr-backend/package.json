@@ -5,7 +5,7 @@
   "main": "server.js",
   "homepage": ".",
   "scripts": {
-    "start": "node app/server.js",
+    "start": "node app/index.js",
     "seed": "node seeds/index.js"
   },
   "keywords": [],
