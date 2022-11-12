@@ -7,8 +7,8 @@
   "description": "![Application Logo](./src/project-emr-frontend/src/assets/images/my-pulse-logo.png)",
   "main": "server.js",
   "scripts": {
-    "start": "node dist",
-    "dev:server": "cd src/project-emr-backend && npm run start",
+    "start": "node src/project-emr-backend",
+    "dev:server": "cd src/project-emr-backend/app && npm run start",
     "dev:client": "cd src/project-emr-frontend && npm run start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" --no-copy-ignored src/project-emr-backend/app",
