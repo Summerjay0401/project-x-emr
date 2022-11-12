@@ -11,7 +11,7 @@
     "dev:server": "cd src/project-emr-backend && npm run start",
     "dev:client": "cd src/project-emr-frontend && npm run start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" ",
+    "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" --no-copy-ignored src/project-emr-backend/app",
     "generate": "heroku run node src/project-emr-backend/seeds/index.js -a ehr-mypulse",
     "postinstall": "cd src/project-emr-frontend && npm install && npm run build"
   },
