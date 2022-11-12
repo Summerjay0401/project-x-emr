@@ -33,6 +33,16 @@ db.sequelize.sync();
 //   res.json({ message: "Welcome to application." });
 // });
 
+  // When our project is pushed to production, we will serve // the react app using express.static() middleware
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.resolve(__dirname, "../project-emr-frontend/build")));
+
+    // Any request not caught by our API will be routed
+    // to our built react app
+    app.get("*", function (req, res) {
+      res.sendFile(path.resolve(__dirname, "../project-emr-frontend/build", "index.html"));
+    });
+  }
 // routes
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
