@@ -1,17 +1,17 @@
-import React from 'react'
-import Header from '../../components/Header'
-import { Box } from '@mui/material'
+import React from "react";
+import Header from "../../components/Header";
+import { Box } from "@mui/material";
 
-import Map from '../../components/Map';
+// import Map from '../../components/Map';
 
-import Widget from '../../components/Widget'
+import Widget from "../../components/Widget";
 
 const Dashboard = () => {
   return (
     <div>
       <Box m="20px"></Box>
       <Header title="Welcome Dan Ross!" subtitle="Dashboard" />
-      
+
       <div className="widgets">
         <Widget type="my-profile" />
         <Widget type="appointments" />
@@ -23,12 +23,11 @@ const Dashboard = () => {
         <Widget type="billing" />
       </div>
 
-      <Box m="20px">
+      {/* <Box m="20px">
         <Map />
-      </Box>
-
+      </Box> */}
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
