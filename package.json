@@ -7,7 +7,7 @@
   "description": "![Application Logo](./src/project-emr-frontend/src/assets/images/my-pulse-logo.png)",
   "main": "server.js",
   "scripts": {
-    "start": "cd src/project-emr-backend && npm start",
+    "start": "node dist",
     "dev:server": "cd src/project-emr-backend && npm run start",
     "dev:client": "cd src/project-emr-frontend && npm run start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
