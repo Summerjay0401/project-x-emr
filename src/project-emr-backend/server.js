@@ -29,9 +29,9 @@ db.sequelize.sync();
 // });
 
 // simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to application." });
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to application." });
+// });
 
 // routes
 require('./app/routes/auth.routes')(app);
