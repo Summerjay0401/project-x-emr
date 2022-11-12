@@ -53,6 +53,7 @@ This Node Express application powers all functionality on the tenant and admin s
 ## Deployment
 
 - https://ehr-mypulse.herokuapp.com/login
+- For sample user, use userone as the username, and user as the password
 
 ---
 
