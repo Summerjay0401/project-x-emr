@@ -26,8 +26,16 @@
   },
   "homepage": "https://github.com/Summerjay0401/project-x-emr#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
-    "sequelize": "^6.25.3"
+    "sequelize": "^6.25.3",
+    "stripe": "^10.15.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
