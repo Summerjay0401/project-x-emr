@@ -12,7 +12,7 @@
     "dev:client": "cd src/project-emr-frontend && npm run start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" --no-copy-ignored src/project-emr-backend",
-    "generate": "cd src/project-emr-backend && npm run seed",
+    "generate": "heroku run node src/project-emr-backend/seeds/index.js -a ehr-mypulse",
     "postinstall": "cd src/project-emr-frontend && npm install && npm run build"
   },
   "repository": {
@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/Summerjay0401/project-x-emr#readme",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
